@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Агентство недвижимости «Квадрат» — Грозный и Дубай</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f5f5f5;
+            color: #1a1a2e;
+            line-height: 1.6;
+        }
+        .header {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky; top: 0; z-index: 100;
+        }
+        .logo { font-size: 22px; font-weight: bold; letter-spacing: 1px; }
+        .logo span { color: #e2b659; }
+        .phone-header {
+            background: #e2b659; color: #1a1a2e;
+            padding: 8px 15px; border-radius: 20px;
+            text-decoration: none; font-weight: bold; font-size: 14px;
+        }
+        .hero {
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><rect fill="%231a1a2e" width="400" height="200"/><text x="30" y="80" fill="%23e2b659" font-size="18" font-family="Arial">🏢</text><text x="30" y="140" fill="white" font-size="14" font-family="Arial">КВАДРАТ</text></svg>') center/cover;
+            padding: 60px 20px; text-align: center; color: white;
+            background-color: #1a1a2e;
+        }
+        .hero h1 { font-size: 28px; margin-bottom: 10px; }
+        .hero h1 span { color: #e2b659; }
+        .hero p { font-size: 16px; opacity: 0.9; margin-bottom: 20px; }
+        .btn {
+            display: inline-block; background: #e2b659; color: #1a1a2e;
+            padding: 14px 30px; border-radius: 30px; text-decoration: none;
+            font-weight: bold; font-size: 16px; margin: 5px;
+        }
+        .btn-outline {
+            background: transparent; border: 2px solid #e2b659; color: #e2b659;
+        }
+        .section { padding: 30px 20px; max-width: 600px; margin: 0 auto; }
+        .section h2 {
+            text-align: center; font-size: 24px; margin-bottom: 20px;
+            position: relative;
+        }
+        .section h2:after {
+            content: ''; display: block; width: 50px; height: 3px;
+            background: #e2b659; margin: 10px auto 0;
+        }
+        .locations {
+            display: flex; gap: 15px; margin-bottom: 20px;
+        }
+        .location-card {
+            flex: 1; background: white; padding: 20px; border-radius: 12px;
+            text-align: center; box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            border-top: 4px solid #e2b659;
+        }
+        .location-card h3 { margin-bottom: 5px; }
+        .location-card p { font-size: 14px; color: #666; }
+        .agents { display: flex; flex-direction: column; gap: 15px; }
+        .agent-card {
+            background: white; padding: 20px; border-radius: 12px;
+            display: flex; align-items: center; gap: 15px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+        .agent-avatar {
+            width: 60px; height: 60px; border-radius: 50%;
+            background: #1a1a2e; color: #e2b659; display: flex;
+            align-items: center; justify-content: center;
+            font-size: 24px; font-weight: bold; flex-shrink: 0;
+        }
+        .agent-info h4 { margin-bottom: 3px; }
+        .agent-info p { font-size: 13px; color: #666; }
+        .agent-phone {
+            margin-left: auto; background: #e2b659; color: #1a1a2e;
+            padding: 8px 12px; border-radius: 20px; text-decoration: none;
+            font-size: 13px; font-weight: bold; white-space: nowrap;
+        }
+        .advantages {
+            display: flex; flex-wrap: wrap; gap: 10px;
+        }
+        .advantage {
+            flex: 1 1 45%; background: white; padding: 15px;
+            border-radius: 10px; text-align: center; font-size: 14px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+        .advantage .icon { font-size: 30px; margin-bottom: 5px; }
+        .footer {
+            background: #1a1a2e; color: white; text-align: center;
+            padding: 30px 20px; margin-top: 20px;
+        }
+        .footer .logo { margin-bottom: 15px; }
+        .footer p { font-size: 14px; opacity: 0.8; margin-bottom: 5px; }
+        .footer .btn { margin-top: 10px; }
+        @media (max-width: 400px) {
+            .hero h1 { font-size: 22px; }
+            .locations { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Шапка -->
+    <div class="header">
+        <div class="logo">КВАДРАТ<span>.</span></div>
+        <a href="tel:+79280000000" class="phone-header">📞 Позвонить</a>
+    </div>
+
+    <!-- Главный экран -->
+    <div class="hero">
+        <h1>Агентство недвижимости<br><span>«Квадрат»</span></h1>
+        <p>Продажа и аренда недвижимости в Чеченской Республике и в Дубае</p>
+        <a href="#contact" class="btn">Оставить заявку</a>
+        <a href="#agents" class="btn btn-outline">Наши агенты</a>
+    </div>
+
+    <!-- География -->
+    <div class="section">
+        <h2>🌍 География работы</h2>
+        <div class="locations">
+            <div class="location-card">
+                <h3>🏔️ Грозный</h3>
+                <p>Чеченская Республика, Россия</p>
+            </div>
+            <div class="location-card">
+                <h3>🏝️ Дубай</h3>
+                <p>Объединённые Арабские Эмираты</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Преимущества -->
+    <div class="section">
+        <h2>✅ Почему выбирают нас</h2>
+        <div class="advantages">
+            <div class="advantage">
+                <div class="icon">🔍</div>
+                <strong>Юридическая чистота</strong>
+                <p style="font-size:12px;color:#666;">Проверяем все документы</p>
+            </div>
+            <div class="advantage">
+                <div class="icon">⚡</div>
+                <strong>Быстрые сделки</strong>
+                <p style="font-size:12px;color:#666;">От 3 дней на оформление</p>
+            </div>
+            <div class="advantage">
+                <div class="icon">💰</div>
+                <strong>Выгодные цены</strong>
+                <p style="font-size:12px;color:#666;">Прямые контакты собственников</p>
+            </div>
+            <div class="advantage">
+                <div class="icon">🌐</div>
+                <strong>Международный опыт</strong>
+                <p style="font-size:12px;color:#666;">Сделки в ОАЭ под ключ</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Агенты -->
+    <div class="section" id="agents">
+        <h2>👥 Наши агенты</h2>
+        <div class="agents">
+            <div class="agent-card">
+                <div class="agent-avatar">А</div>
+                <div class="agent-info">
+                    <h4>Аслан Магомадов</h4>
+                    <p>Специалист по Грозному</p>
+                </div>
+                <a href="tel:+79280000001" class="agent-phone">📞</a>
+            </div>
+            <div class="agent-card">
+                <div class="agent-avatar">М</div>
+                <div class="agent-info">
+                    <h4>Марьям Эльтамирова</h4>
+                    <p>Специалист по Дубаю</p>
+                </div>
+                <a href="tel:+79280000002" class="agent-phone">📞</a>
+            </div>
+            <div class="agent-card">
+                <div class="agent-avatar">Р</div>
+                <div class="agent-info">
+                    <h4>Руслан Даудов</h4>
+                    <p>Международные сделки</p>
+                </div>
+                <a href="tel:+79280000003" class="agent-phone">📞</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Контакты -->
+    <div class="section" id="contact">
+        <h2>📋 Оставить заявку</h2>
+        <p style="text-align:center;margin-bottom:20px;">Позвоните нам или напишите в WhatsApp</p>
+        <div style="text-align:center;">
+            <a href="tel:+79280000000" class="btn">📞 Позвонить</a>
+            <a href="https://wa.me/79280000000" class="btn btn-outline" style="color:#1a1a2e;border-color:#25D366;">💬 WhatsApp</a>
+        </div>
+    </div>
+
+    <!-- Подвал -->
+    <div class="footer">
+        <div class="logo">КВАДРАТ<span>.</span></div>
+        <p>🏢 г. Грозный, ул. Мира, д. 10</p>
+        <p>📧 kvadrat@grozny.ru</p>
+        <p>🕒 Пн–Сб: 09:00 – 19:00</p>
+        <a href="tel:+79280000000" class="btn">Связаться с нами</a>
+    </div>
+
+</body>
+</html>
