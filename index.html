@@ -7,181 +7,142 @@
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            font-family: 'Arial', sans-serif;
-            background: #f5f5f5;
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            background: #f2f4f7;
             color: #1a1a2e;
             line-height: 1.6;
         }
         .header {
-            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            background: #0f172a;
             color: white;
-            padding: 15px 20px;
+            padding: 14px 20px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             position: sticky; top: 0; z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
         }
-        .logo { font-size: 22px; font-weight: bold; letter-spacing: 1px; }
-        .logo span { color: white; }
+        .logo { font-size: 20px; font-weight: 700; letter-spacing: 1px; color: white; }
+        .logo span { color: #94a3b8; }
         .phone-header {
-            background: #1a3c5e; color: white;
-            padding: 8px 15px; border-radius: 20px;
-            text-decoration: none; font-weight: bold; font-size: 14px;
+            background: #1e3a5f; color: white;
+            padding: 9px 18px; border-radius: 8px;
+            text-decoration: none; font-weight: 600; font-size: 14px;
         }
         .hero {
-            background: url('Foto.JPG') center/cover;
-            padding: 60px 20px; text-align: center; color: white;
-            background-color: #1a1a2e;
+            background: linear-gradient(rgba(15,23,42,0.7), rgba(15,23,42,0.7)), url('Foto.JPG') center/cover;
+            padding: 70px 20px; text-align: center; color: white;
+            background-color: #0f172a;
         }
-        .hero h1 { font-size: 28px; margin-bottom: 10px; }
-        .hero h1 span { color: #e2b659; }
-        .hero p { font-size: 16px; opacity: 0.9; margin-bottom: 20px; }
+        .hero h1 { font-size: 30px; font-weight: 700; margin-bottom: 10px; }
+        .hero h1 span { color: #94a3b8; }
+        .hero p { font-size: 16px; opacity: 0.9; margin-bottom: 24px; }
         .btn {
-            display: inline-block; background: #1a3c5e; color: #white;
-            padding: 14px 30px; border-radius: 30px; text-decoration: none;
-            font-weight: bold; font-size: 16px; margin: 5px;
+            display: inline-block; background: #1e3a5f; color: white;
+            padding: 14px 28px; border-radius: 8px; text-decoration: none;
+            font-weight: 600; font-size: 15px; margin: 5px; transition: 0.2s;
         }
+        .btn:hover { background: #0f172a; }
         .btn-outline {
             background: transparent; border: 2px solid white; color: white;
         }
-        .section { padding: 30px 20px; max-width: 600px; margin: 0 auto; }
+        .btn-outline:hover { background: white; color: #0f172a; }
+        .section { padding: 40px 20px; max-width: 650px; margin: 0 auto; }
         .section h2 {
-            text-align: center; font-size: 24px; margin-bottom: 20px;
-            position: relative;
+            text-align: center; font-size: 24px; font-weight: 700;
+            margin-bottom: 8px; color: #0f172a;
+        }
+        .section .subtitle {
+            text-align: center; color: #64748b; margin-bottom: 24px; font-size: 14px;
         }
         .section h2:after {
             content: ''; display: block; width: 50px; height: 3px;
-            background: #1a3c5e; margin: 10px auto 0;
+            background: #1e3a5f; margin: 10px auto 0; border-radius: 2px;
         }
         .locations {
             display: flex; gap: 15px; margin-bottom: 20px;
         }
         .location-card {
-            flex: 1; background: white; padding: 20px; border-radius: 12px;
-            text-align: center; box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-            border-top: 4px solid #1a3c5e;
+            flex: 1; background: white; padding: 24px 16px; border-radius: 12px;
+            text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            border-top: 4px solid #1e3a5f;
         }
-        .location-card h3 { margin-bottom: 5px; }
-        .location-card p { font-size: 14px; color: #666; }
-        .agents { display: flex; flex-direction: column; gap: 15px; }
-        .agent-card {
-            background: white; padding: 20px; border-radius: 12px;
-            display: flex; align-items: center; gap: 15px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-        }
-        .agent-avatar {
-            width: 60px; height: 60px; border-radius: 50%;
-            background: #1a3c5e; color: white; display: flex;
-            align-items: center; justify-content: center;
-            font-size: 24px; font-weight: bold; flex-shrink: 0;
-        }
-        .agent-info h4 { margin-bottom: 3px; }
-        .agent-info p { font-size: 13px; color: #666; }
-        .agent-phone {
-            margin-left: auto; background: #1a3c5e; color: white;
-            padding: 8px 12px; border-radius: 20px; text-decoration: none;
-            font-size: 13px; font-weight: bold; white-space: nowrap;
-        }
+        .location-card h3 { margin-bottom: 4px; font-size: 17px; }
+        .location-card p { font-size: 13px; color: #64748b; }
         .advantages {
-            display: flex; flex-wrap: wrap; gap: 10px;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
         }
         .advantage {
-            flex: 1 1 45%; background: white; padding: 15px;
-            border-radius: 10px; text-align: center; font-size: 14px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            background: white; padding: 20px 14px; border-radius: 12px;
+            text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         }
-        .advantage .icon { font-size: 30px; margin-bottom: 5px; }
-        .footer {
-            background: #1a1a2e; color: white; text-align: center;
-            padding: 30px 20px; margin-top: 20px;
-        }
-        .footer .logo { margin-bottom: 15px; }
-        .footer p { font-size: 14px; opacity: 0.8; margin-bottom: 5px; }
-        .footer .btn { margin-top: 10px; }
-        @media (max-width: 400px) {
-            .hero h1 { font-size: 22px; }
-            .locations { flex-direction: column; }
-        }
+        .advantage strong { display: block; font-size: 14px; margin-bottom: 2px; }
+        .advantage p { font-size: 12px; color: #64748b; margin: 0; }
         .conditions-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
         }
         .condition-card {
-            background: white;
-            padding: 18px 14px;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-            border-top: 3px solid #e2b659;
+            background: white; padding: 18px 14px; border-radius: 12px;
+            text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            border-top: 3px solid #1e3a5f;
         }
-        .condition-icon {
-            font-size: 32px;
-            margin-bottom: 8px;
-        }
-        .condition-card h3 {
-            font-size: 14px;
-            margin-bottom: 6px;
-            color: #1a1a2e;
-        }
-        .condition-card p {
-            font-size: 12px;
-            color: #666;
-            line-height: 1.4;
-        }
-        .steps {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-top: 20px;
-        }
+        .condition-card h3 { font-size: 14px; margin-bottom: 4px; color: #0f172a; }
+        .condition-card p { font-size: 12px; color: #64748b; line-height: 1.4; }
+        .steps { display: flex; flex-direction: column; gap: 12px; margin-top: 20px; }
         .step {
-            background: white;
-            padding: 20px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            background: white; padding: 18px; border-radius: 12px;
+            display: flex; align-items: center; gap: 14px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         }
         .step-number {
-            width: 40px;
-            height: 40px;
-            background: #1a1a2e;
-            color: #e2b659;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 18px;
-            flex-shrink: 0;
+            width: 38px; height: 38px; background: #0f172a; color: white;
+            border-radius: 50%; display: flex; align-items: center;
+            justify-content: center; font-weight: 700; font-size: 16px; flex-shrink: 0;
         }
-        .step h4 {
-            margin-bottom: 3px;
-            font-size: 15px;
+        .step h4 { margin-bottom: 2px; font-size: 15px; }
+        .step p { font-size: 13px; color: #64748b; margin: 0; }
+        .agents { display: flex; flex-direction: column; gap: 12px; }
+        .agent-card {
+            background: white; padding: 18px; border-radius: 12px;
+            display: flex; align-items: center; gap: 14px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         }
-        .step p {
-            font-size: 13px;
-            color: #666;
-            margin: 0;
+        .agent-avatar {
+            width: 52px; height: 52px; border-radius: 50%;
+            background: #0f172a; color: white; display: flex;
+            align-items: center; justify-content: center;
+            font-size: 20px; font-weight: 700; flex-shrink: 0;
         }
+        .agent-info h4 { margin-bottom: 2px; font-size: 15px; }
+        .agent-info p { font-size: 13px; color: #64748b; }
+        .agent-phone {
+            margin-left: auto; background: #1e3a5f; color: white;
+            padding: 8px 14px; border-radius: 8px; text-decoration: none;
+            font-size: 13px; font-weight: 600; white-space: nowrap;
+        }
+        .contact-buttons { text-align: center; margin-top: 10px; }
+        .contact-buttons .btn { margin: 8px; }
+        .footer {
+            background: #0f172a; color: white; text-align: center;
+            padding: 30px 20px; margin-top: 20px;
+        }
+        .footer p { font-size: 13px; opacity: 0.8; margin-bottom: 4px; }
+        .footer .btn { margin-top: 12px; }
         @media (max-width: 400px) {
-            .conditions-grid {
-                grid-template-columns: 1fr 1fr;
-            }
+            .hero h1 { font-size: 24px; }
+            .locations { flex-direction: column; }
+            .advantages { grid-template-columns: 1fr 1fr; }
+            .conditions-grid { grid-template-columns: 1fr 1fr; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Шапка -->
     <div class="header">
-        <img src="Logo.png" alt="Квадрат" style="height: 50px;">
-        <a href="tel:+79671251240" class="phone-header">📞 Позвонить</a>
+        <img src="Logo.png" alt="Квадрат" style="height: 40px;">
+        <a href="tel:+79671251240" class="phone-header">Позвонить</a>
     </div>
 
-    <!-- Главный экран -->
     <div class="hero">
         <h1>Агентство недвижимости<br><span>«Kvadrat»</span></h1>
         <p>Продажа и аренда недвижимости в Чеченской Республике и в Дубае</p>
@@ -189,131 +150,114 @@
         <a href="#agents" class="btn btn-outline">Наши агенты</a>
     </div>
 
-    <!-- География -->
     <div class="section">
-        <h2>🌍 География работы</h2>
+        <h2>География работы</h2>
+        <p class="subtitle">Работаем в двух направлениях</p>
         <div class="locations">
             <div class="location-card">
-                <h3>🏔️ Грозный</h3>
+                <h3>Грозный</h3>
                 <p>Чеченская Республика, Россия</p>
             </div>
             <div class="location-card">
-                <h3>🏝️ Дубай</h3>
+                <h3>Дубай</h3>
                 <p>Объединённые Арабские Эмираты</p>
             </div>
         </div>
     </div>
 
-    <!-- Преимущества -->
     <div class="section">
-        <h2>✅ Почему выбирают нас</h2>
+        <h2>Почему выбирают нас</h2>
+        <p class="subtitle">Работаем со всеми застройщиками Чечни и Дубая</p>
         <div class="advantages">
             <div class="advantage">
-                <div class="icon">🔍</div>
                 <strong>Юридическая чистота</strong>
-                <p style="font-size:12px;color:#666;">Проверяем все документы</p>
+                <p>Проверяем все документы</p>
             </div>
             <div class="advantage">
-                <div class="icon">⚡</div>
                 <strong>Быстрые сделки</strong>
-                <p style="font-size:12px;color:#666;">От 1 дня на оформление</p>
+                <p>От 1 дня на оформление</p>
             </div>
             <div class="advantage">
-                <div class="icon">💰</div>
                 <strong>Выгодные цены</strong>
-                <p style="font-size:12px;color:#666;">Прямые контакты собственников</p>
+                <p>Прямые контакты застройщиков</p>
             </div>
             <div class="advantage">
-                <div class="icon">🌐</div>
                 <strong>Международный опыт</strong>
-                <p style="font-size:12px;color:#666;">Сделки в ОАЭ под ключ</p>
+                <p>Сделки в ОАЭ под ключ</p>
             </div>
         </div>
     </div>
 
-<!-- Условия покупки -->
     <div class="section" id="conditions">
-        <h2>🏠 Покупаем недвижимость выгодно</h2>
-        <p style="text-align:center; color:#666; margin-bottom:20px;">Работаем со всеми застройщиками Чечни и Дубая. Подберём лучший вариант.</p>
-        
+        <h2>Условия покупки</h2>
+        <p class="subtitle">Подберём лучший вариант под вашу ситуацию</p>
         <div class="conditions-grid">
-            
             <div class="condition-card">
-                <div class="condition-icon">🏦</div>
                 <h3>Исламская рассрочка</h3>
-                <p>Без процентов и переплат. Рассрочка до 6 лет по нормам ислама. Без участия банка.</p>
+                <p>Без процентов. До 6 лет. По нормам ислама.</p>
             </div>
-            
             <div class="condition-card">
-                <div class="condition-icon">💰</div>
-                <h3>Без первоначального взноса</h3>
-                <p>Варианты покупки без первого взноса. Заезжайте сразу, платите потом.</p>
+                <h3>Без первого взноса</h3>
+                <p>Варианты без первоначального взноса.</p>
             </div>
-            
             <div class="condition-card">
-                <div class="condition-icon">👶</div>
                 <h3>Материнский капитал</h3>
-                <p>Принимаем маткапитал на первого и второго ребёнка. Поможем оформить документы.</p>
+                <p>На первого и второго ребёнка.</p>
             </div>
-            
             <div class="condition-card">
-                <div class="condition-icon">🎖️</div>
                 <h3>Скидки участникам СВО</h3>
-                <p>Специальные условия для участников спецоперации и их семей. Узнайте подробности.</p>
+                <p>Специальные условия для военных.</p>
             </div>
-            
             <div class="condition-card">
-                <div class="condition-icon">👴</div>
                 <h3>Скидки пенсионерам</h3>
-                <p>Льготные условия для пенсионеров. Поможем подобрать комфортное жильё.</p>
+                <p>Льготные условия для пенсионеров.</p>
             </div>
-            
             <div class="condition-card">
-                <div class="condition-icon">🏢</div>
                 <h3>Коммерческая недвижимость</h3>
-                <p>Офисы, помещения, склады. Подберём под ваш бизнес в Грозном и Дубае.</p>
+                <p>Офисы, склады, помещения.</p>
             </div>
-            
             <div class="condition-card">
-                <div class="condition-icon">🌳</div>
                 <h3>Земельные участки</h3>
-                <p>Участки под ИЖС и коммерческую застройку. Все районы Чеченской Республики.</p>
+                <p>Под ИЖС и застройку. Все районы.</p>
             </div>
-            
             <div class="condition-card">
-                <div class="condition-icon">🤝</div>
-                <h3>Работаем со всеми застройщиками</h3>
-                <p>Сотрудничаем с десятками застройщиков. Найдём то, что нужно именно вам.</p>
+                <h3>Все застройщики</h3>
+                <p>Работаем с десятками застройщиков.</p>
             </div>
-            
         </div>
     </div>
 
-    <!-- Как мы работаем -->
     <div class="section" id="how-we-work">
-        <h2>📋 Как мы работаем</h2>
-        
+        <h2>Как мы работаем</h2>
+        <p class="subtitle">Три простых шага к вашей недвижимости</p>
         <div class="steps">
             <div class="step">
                 <div class="step-number">1</div>
-                <h4>Вы оставляете заявку</h4>
-                <p>Звоните или пишете в WhatsApp. Рассказываете, что ищете.</p>
+                <div>
+                    <h4>Вы оставляете заявку</h4>
+                    <p>Звоните или пишете в WhatsApp. Рассказываете, что ищете.</p>
+                </div>
             </div>
             <div class="step">
                 <div class="step-number">2</div>
-                <h4>Подбираем варианты</h4>
-                <p>Показываем подходящие объекты от всех застройщиков.</p>
+                <div>
+                    <h4>Подбираем варианты</h4>
+                    <p>Показываем подходящие объекты от всех застройщиков.</p>
+                </div>
             </div>
             <div class="step">
                 <div class="step-number">3</div>
-                <h4>Оформляем сделку</h4>
-                <p>Рассрочка, маткапитал, скидки — всё оформим. Вы заезжаете.</p>
+                <div>
+                    <h4>Оформляем сделку</h4>
+                    <p>Рассрочка, маткапитал, скидки — всё оформим. Вы заезжаете.</p>
+                </div>
             </div>
         </div>
     </div>
-    <!-- Агенты -->
+
     <div class="section" id="agents">
-        <h2>👥 Наши агенты</h2>
+        <h2>Наши агенты</h2>
+        <p class="subtitle">Опытные специалисты к вашим услугам</p>
         <div class="agents">
             <div class="agent-card">
                 <div class="agent-avatar">Ш</div>
@@ -321,43 +265,41 @@
                     <h4>Шамсудин Мирзоев</h4>
                     <p>Специалист по недвижимости</p>
                 </div>
-                <a href="tel:+79671251240" class="agent-phone">📞</a>
+                <a href="tel:+79671251240" class="agent-phone">Позвонить</a>
             </div>
             <div class="agent-card">
                 <div class="agent-avatar">Х</div>
                 <div class="agent-info">
                     <h4>Халид Гериханов</h4>
-                    <p>Агент по недвижимость</p>
+                    <p>Агент по недвижимости</p>
                 </div>
-                <a href="tel:+79389931106" class="agent-phone">📞</a>
+                <a href="tel:+79389931106" class="agent-phone">Позвонить</a>
             </div>
             <div class="agent-card">
                 <div class="agent-avatar">М</div>
                 <div class="agent-info">
                     <h4>Муслим Абдулкадыров</h4>
-                    <p>Агент по Недвижимости</p>
+                    <p>Агент по недвижимости</p>
                 </div>
-                <a href="tel:+79389097957" class="agent-phone">📞</a>
+                <a href="tel:+79389097957" class="agent-phone">Позвонить</a>
             </div>
         </div>
     </div>
 
-    <!-- Контакты -->
     <div class="section" id="contact">
-        <h2>📋 Оставить заявку</h2>
-        <p style="text-align:center;margin-bottom:20px;">Позвоните нам или напишите в WhatsApp</p>
-        <div style="text-align:center;">
-            <a href="tel:+79671251240" class="btn">📞 Позвонить</a>
-            <a href="https://wa.me/79671251240" class="btn btn-outline" style="color:#1a1a2e;border-color:#25D366;">💬 WhatsApp</a>
+        <h2>Оставить заявку</h2>
+        <p class="subtitle">Позвоните или напишите — ответим сразу</p>
+        <div class="contact-buttons">
+            <a href="tel:+79671251240" class="btn">Позвонить</a>
+            <a href="https://wa.me/79671251240" class="btn btn-outline" style="color:#0f172a; border-color:#1e3a5f;">WhatsApp</a>
         </div>
     </div>
 
-    <!-- Подвал -->
     <div class="footer">
-        <div class="logo">KVADRAT<span>.</span></div>
-        <p>🏢 г. Грозный, ул. С.Ш Лорсанова, 4</p>
-        <p>📧 kvadrat@grozny.ru</p>
-        <p>🕒 Пн–Сб: 10:00 – 17:00</p>
+        <p><strong>KVADRAT.</strong></p>
+        <p>г. Грозный, ул. С.Ш. Лорсанова, 4</p>
+        <p>kvadrat@grozny.ru</p>
+        <p>Пн–Сб: 10:00 – 17:00</p>
         <a href="tel:+79671251240" class="btn">Связаться с нами</a>
     </div>
 
