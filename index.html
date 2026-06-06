@@ -206,6 +206,16 @@
             .steps { grid-template-columns: 1fr; }
             .agents { grid-template-columns: 1fr; }
         }
+        /* Анимация появления */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body>
@@ -244,8 +254,8 @@
     </div>
 
     <!-- География -->
-    <div class="section">
-        <h2>Недвижимость в Грозном и Дубае</h2>
+    <div class="section fade-in">
+    <h2>Недвижимость в Грозном и Дубае</h2>
         <p class="subtitle">Работаем в двух направлениях</p>
         <div class="locations">
             <div class="location-card">
@@ -260,8 +270,8 @@
     </div>
 
     <!-- Преимущества -->
-    <div class="section">
-        <h2>Почему выбирают Kvadrat Capital</h2>
+    <div class="section fade-in">
+    <h2>Почему выбирают Kvadrat Capital</h2>
         <p class="subtitle">Работаем со всеми застройщиками Чечни и Дубая</p>
         <div class="advantages">
             <div class="advantage">
@@ -288,7 +298,7 @@
     </div>
 
     <!-- Условия -->
-    <div class="section" id="conditions">
+    <div class="section fade-in" id="conditions">
         <h2>Условия покупки недвижимости</h2>
         <p class="subtitle">Подберём лучший вариант под вашу ситуацию</p>
         <div class="conditions-grid">
@@ -338,7 +348,7 @@
     </div>
 
     <!-- Как мы работаем -->
-    <div class="section" id="how-we-work">
+    <div class="section fade-in" id="how-we-work">
         <h2>Как мы работаем</h2>
         <p class="subtitle">Три простых шага к вашей недвижимости</p>
         <div class="steps">
@@ -361,7 +371,7 @@
     </div>
 
     <!-- Агенты -->
-    <div class="section" id="agents">
+    <div class="section fade-in" id="agents">
         <h2>Агенты по недвижимости в Грозном</h2>
         <p class="subtitle">Опытные специалисты к вашим услугам</p>
         <div class="agents">
@@ -393,7 +403,7 @@
     </div>
 
     <!-- Контакты -->
-    <div class="section" id="contact">
+    <div class="section fade-in" id="contact">
         <h2>Оставить заявку</h2>
         <p class="subtitle">Позвоните или напишите — ответим сразу</p>
         <div class="contact-buttons">
@@ -423,6 +433,16 @@
             document.getElementById('menuPanel').classList.remove('open');
         }
     </script>
+        // Анимация появления при прокрутке
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.15 });
 
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
