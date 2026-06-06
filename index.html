@@ -8,10 +8,12 @@
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
             font-family: 'Segoe UI', 'Arial', sans-serif;
-            background: #f2f4f7;
+            background: #fff;
             color: #1a1a2e;
             line-height: 1.6;
         }
+
+        /* Шапка */
         .header {
             background: #0f172a;
             color: white;
@@ -19,133 +21,177 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            position: sticky; top: 0; z-index: 100;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
         }
-        .header-inner {
-            max-width: 1100px; margin: 0 auto; width: 100%;
-            display: flex; align-items: center; justify-content: space-between;
+        .header img { height: 38px; }
+        .burger {
+            background: none; border: none; color: white; font-size: 26px;
+            cursor: pointer; padding: 5px;
         }
-        .phone-header {
-            background: #1e3a5f; color: white;
-            padding: 9px 18px; border-radius: 8px;
-            text-decoration: none; font-weight: 600; font-size: 14px;
+
+        /* Меню */
+        .menu-overlay {
+            display: none;
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.7); z-index: 200;
         }
+        .menu-overlay.open { display: block; }
+        .menu-panel {
+            position: fixed; top: 0; right: 0; width: 280px; height: 100%;
+            background: #0f172a; z-index: 300; padding: 30px 20px;
+            transform: translateX(100%); transition: transform 0.3s;
+        }
+        .menu-panel.open { transform: translateX(0); }
+        .menu-panel a {
+            display: block; color: white; text-decoration: none;
+            padding: 12px 0; font-size: 16px; border-bottom: 1px solid #1e3a5f;
+        }
+        .menu-panel .close-btn {
+            background: none; border: none; color: white; font-size: 24px;
+            cursor: pointer; margin-bottom: 20px;
+        }
+
+        /* Hero */
         .hero {
-            background: linear-gradient(rgba(15,23,42,0.7), rgba(15,23,42,0.7)), url('Foto.JPG') center/cover;
-            padding: 80px 20px; text-align: center; color: white;
+            background: linear-gradient(rgba(15,23,42,0.75), rgba(15,23,42,0.75)), url('Foto.JPG') center/cover;
+            min-height: 100vh;
+            display: flex; align-items: center; justify-content: center;
+            text-align: center; color: white; padding: 100px 20px 60px;
             background-color: #0f172a;
         }
-        .hero-inner { max-width: 700px; margin: 0 auto; }
-        .hero h1 { font-size: 30px; font-weight: 700; margin-bottom: 10px; }
+        .hero-inner { max-width: 700px; }
+        .hero h1 { font-size: 42px; font-weight: 700; margin-bottom: 16px; }
         .hero h1 span { color: #94a3b8; }
-        .hero p { font-size: 16px; opacity: 0.9; margin-bottom: 24px; }
+        .hero p { font-size: 18px; opacity: 0.9; margin-bottom: 30px; }
         .btn {
             display: inline-block; background: #1e3a5f; color: white;
-            padding: 14px 28px; border-radius: 8px; text-decoration: none;
-            font-weight: 600; font-size: 15px; margin: 5px; transition: 0.2s;
+            padding: 16px 32px; border-radius: 8px; text-decoration: none;
+            font-weight: 600; font-size: 16px; margin: 6px; transition: 0.2s;
         }
         .btn:hover { background: #0f172a; }
         .btn-outline {
             background: transparent; border: 2px solid white; color: white;
         }
         .btn-outline:hover { background: white; color: #0f172a; }
+
+        /* Секции */
         .section {
-            padding: 50px 20px;
+            padding: 70px 20px;
             max-width: 1100px;
             margin: 0 auto;
         }
         .section h2 {
-            text-align: center; font-size: 26px; font-weight: 700;
-            margin-bottom: 8px; color: #0f172a;
+            text-align: center; font-size: 28px; font-weight: 700;
+            margin-bottom: 10px; color: #0f172a;
         }
         .section .subtitle {
-            text-align: center; color: #64748b; margin-bottom: 30px; font-size: 15px;
+            text-align: center; color: #64748b; margin-bottom: 40px; font-size: 16px;
         }
         .section h2:after {
-            content: ''; display: block; width: 50px; height: 3px;
-            background: #1e3a5f; margin: 10px auto 0; border-radius: 2px;
+            content: ''; display: block; width: 60px; height: 3px;
+            background: #1e3a5f; margin: 12px auto 0; border-radius: 2px;
         }
+
+        /* География */
         .locations {
-            display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 600px; margin: 0 auto;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 600px; margin: 0 auto;
         }
         .location-card {
-            background: white; padding: 30px 20px; border-radius: 12px;
-            text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-            border-top: 4px solid #1e3a5f;
+            background: #f8f9fb; padding: 40px 20px; border-radius: 12px;
+            text-align: center; border-top: 4px solid #1e3a5f;
         }
-        .location-card h3 { margin-bottom: 6px; font-size: 18px; }
+        .location-card h3 { margin-bottom: 8px; font-size: 20px; }
         .location-card p { font-size: 14px; color: #64748b; }
+
+        /* Преимущества */
         .advantages {
-            display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
         }
         .advantage {
-            background: white; padding: 24px 18px; border-radius: 12px;
-            text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            background: #f8f9fb; padding: 30px 20px; border-radius: 12px;
+            text-align: center;
         }
-        .advantage strong { display: block; font-size: 15px; margin-bottom: 4px; }
+        .advantage .icon {
+            width: 60px; height: 60px; background: #1e3a5f; color: white;
+            border-radius: 50%; display: flex; align-items: center;
+            justify-content: center; font-size: 24px; margin: 0 auto 14px;
+        }
+        .advantage strong { display: block; font-size: 16px; margin-bottom: 6px; }
         .advantage p { font-size: 13px; color: #64748b; margin: 0; }
+
+        /* Условия */
         .conditions-grid {
-            display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
         }
         .condition-card {
-            background: white; padding: 22px 18px; border-radius: 12px;
-            text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-            border-top: 3px solid #1e3a5f;
+            background: #f8f9fb; padding: 28px 20px; border-radius: 12px;
+            text-align: center; border-top: 3px solid #1e3a5f;
         }
-        .condition-card h3 { font-size: 15px; margin-bottom: 6px; color: #0f172a; }
+        .condition-card .icon {
+            font-size: 36px; margin-bottom: 10px;
+        }
+        .condition-card h3 { font-size: 16px; margin-bottom: 8px; color: #0f172a; }
         .condition-card p { font-size: 13px; color: #64748b; line-height: 1.5; }
+
+        /* Этапы */
         .steps {
-            display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 10px;
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 10px;
         }
         .step {
-            background: white; padding: 24px 18px; border-radius: 12px;
-            text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            background: #f8f9fb; padding: 30px 20px; border-radius: 12px;
+            text-align: center;
         }
         .step-number {
-            width: 42px; height: 42px; background: #0f172a; color: white;
+            width: 50px; height: 50px; background: #0f172a; color: white;
             border-radius: 50%; display: flex; align-items: center;
-            justify-content: center; font-weight: 700; font-size: 18px;
-            margin: 0 auto 12px;
+            justify-content: center; font-weight: 700; font-size: 20px;
+            margin: 0 auto 14px;
         }
-        .step h4 { margin-bottom: 6px; font-size: 16px; }
+        .step h4 { margin-bottom: 8px; font-size: 17px; }
         .step p { font-size: 14px; color: #64748b; margin: 0; }
+
+        /* Агенты */
         .agents {
-            display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
         }
         .agent-card {
-            background: white; padding: 24px 18px; border-radius: 12px;
-            text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            background: #f8f9fb; padding: 30px 20px; border-radius: 12px;
+            text-align: center;
         }
         .agent-avatar {
-            width: 60px; height: 60px; border-radius: 50%;
+            width: 70px; height: 70px; border-radius: 50%;
             background: #0f172a; color: white; display: flex;
             align-items: center; justify-content: center;
-            font-size: 22px; font-weight: 700; margin: 0 auto 10px;
+            font-size: 26px; font-weight: 700; margin: 0 auto 12px;
         }
-        .agent-info h4 { margin-bottom: 4px; font-size: 16px; }
-        .agent-info p { font-size: 13px; color: #64748b; margin-bottom: 12px; }
+        .agent-info h4 { margin-bottom: 4px; font-size: 17px; }
+        .agent-info p { font-size: 13px; color: #64748b; margin-bottom: 14px; }
         .agent-phone {
             display: inline-block; background: #1e3a5f; color: white;
-            padding: 8px 16px; border-radius: 8px; text-decoration: none;
+            padding: 8px 18px; border-radius: 8px; text-decoration: none;
             font-size: 13px; font-weight: 600;
         }
+
+        /* Контакты */
         .contact-buttons { text-align: center; margin-top: 10px; }
         .contact-buttons .btn { margin: 8px; }
+
+        /* Подвал */
         .footer {
             background: #0f172a; color: white; text-align: center;
-            padding: 40px 20px; margin-top: 20px;
+            padding: 50px 20px;
         }
-        .footer p { font-size: 14px; opacity: 0.8; margin-bottom: 6px; }
-        .footer .btn { margin-top: 14px; }
+        .footer p { font-size: 14px; opacity: 0.8; margin-bottom: 8px; }
+        .footer .btn { margin-top: 16px; }
 
         /* Телефон */
         @media (max-width: 768px) {
-            .hero { padding: 60px 20px; }
-            .hero h1 { font-size: 24px; }
-            .section { padding: 35px 16px; }
+            .hero h1 { font-size: 28px; }
+            .hero p { font-size: 15px; }
+            .section { padding: 50px 16px; }
             .section h2 { font-size: 22px; }
-            .locations { grid-template-columns: 1fr; max-width: 100%; }
+            .locations { grid-template-columns: 1fr; }
             .advantages { grid-template-columns: 1fr 1fr; }
             .conditions-grid { grid-template-columns: 1fr 1fr; }
             .steps { grid-template-columns: 1fr; }
@@ -155,18 +201,34 @@
 </head>
 <body>
 
+    <!-- Шапка -->
     <div class="header">
-        <img src="Logo.png" alt="Квадрат" style="height: 40px;">
-        <a href="tel:+79671251240" class="phone-header">Позвонить</a>
+        <img src="Logo.png" alt="Kvadrat">
+        <button class="burger" onclick="openMenu()">☰</button>
     </div>
 
+    <!-- Меню -->
+    <div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
+    <div class="menu-panel" id="menuPanel">
+        <button class="close-btn" onclick="closeMenu()">✕</button>
+        <a href="#" onclick="closeMenu()">Главная</a>
+        <a href="#conditions" onclick="closeMenu()">Условия</a>
+        <a href="#how-we-work" onclick="closeMenu()">Как мы работаем</a>
+        <a href="#agents" onclick="closeMenu()">Агенты</a>
+        <a href="#contact" onclick="closeMenu()">Контакты</a>
+    </div>
+
+    <!-- Hero -->
     <div class="hero">
-        <h1>Агентство недвижимости<br><span>«Kvadrat»</span></h1>
-        <p>Продажа и аренда недвижимости в Чеченской Республике и в Дубае</p>
-        <a href="#contact" class="btn">Оставить заявку</a>
-        <a href="#agents" class="btn btn-outline">Наши агенты</a>
+        <div class="hero-inner">
+            <h1>Агентство недвижимости<br><span>«Kvadrat»</span></h1>
+            <p>Продажа и аренда недвижимости в Чеченской Республике и в Дубае</p>
+            <a href="#contact" class="btn">Оставить заявку</a>
+            <a href="#agents" class="btn btn-outline">Наши агенты</a>
+        </div>
     </div>
 
+    <!-- География -->
     <div class="section">
         <h2>География работы</h2>
         <p class="subtitle">Работаем в двух направлениях</p>
@@ -182,96 +244,108 @@
         </div>
     </div>
 
+    <!-- Преимущества -->
     <div class="section">
         <h2>Почему выбирают нас</h2>
         <p class="subtitle">Работаем со всеми застройщиками Чечни и Дубая</p>
         <div class="advantages">
             <div class="advantage">
+                <div class="icon">✓</div>
                 <strong>Юридическая чистота</strong>
                 <p>Проверяем все документы</p>
             </div>
             <div class="advantage">
+                <div class="icon">⚡</div>
                 <strong>Быстрые сделки</strong>
                 <p>От 1 дня на оформление</p>
             </div>
             <div class="advantage">
+                <div class="icon">$</div>
                 <strong>Выгодные цены</strong>
                 <p>Прямые контакты застройщиков</p>
             </div>
             <div class="advantage">
+                <div class="icon">🌐</div>
                 <strong>Международный опыт</strong>
                 <p>Сделки в ОАЭ под ключ</p>
             </div>
         </div>
     </div>
 
+    <!-- Условия -->
     <div class="section" id="conditions">
         <h2>Условия покупки</h2>
         <p class="subtitle">Подберём лучший вариант под вашу ситуацию</p>
         <div class="conditions-grid">
             <div class="condition-card">
+                <div class="icon">🏦</div>
                 <h3>Исламская рассрочка</h3>
                 <p>Без процентов. До 6 лет. По нормам ислама.</p>
             </div>
             <div class="condition-card">
+                <div class="icon">💳</div>
                 <h3>Без первого взноса</h3>
                 <p>Варианты без первоначального взноса.</p>
             </div>
             <div class="condition-card">
+                <div class="icon">👶</div>
                 <h3>Материнский капитал</h3>
                 <p>На первого и второго ребёнка.</p>
             </div>
             <div class="condition-card">
+                <div class="icon">🎖️</div>
                 <h3>Скидки участникам СВО</h3>
                 <p>Специальные условия для военных.</p>
             </div>
+        </div>
+        <div class="conditions-grid" style="margin-top:20px;">
             <div class="condition-card">
+                <div class="icon">👴</div>
                 <h3>Скидки пенсионерам</h3>
                 <p>Льготные условия для пенсионеров.</p>
             </div>
             <div class="condition-card">
+                <div class="icon">🏢</div>
                 <h3>Коммерческая недвижимость</h3>
                 <p>Офисы, склады, помещения.</p>
             </div>
             <div class="condition-card">
+                <div class="icon">🌳</div>
                 <h3>Земельные участки</h3>
                 <p>Под ИЖС и застройку. Все районы.</p>
             </div>
             <div class="condition-card">
+                <div class="icon">🤝</div>
                 <h3>Все застройщики</h3>
                 <p>Работаем с десятками застройщиков.</p>
             </div>
         </div>
     </div>
 
+    <!-- Как мы работаем -->
     <div class="section" id="how-we-work">
         <h2>Как мы работаем</h2>
         <p class="subtitle">Три простых шага к вашей недвижимости</p>
         <div class="steps">
             <div class="step">
                 <div class="step-number">1</div>
-                <div>
-                    <h4>Вы оставляете заявку</h4>
-                    <p>Звоните или пишете в WhatsApp. Рассказываете, что ищете.</p>
-                </div>
+                <h4>Вы оставляете заявку</h4>
+                <p>Звоните или пишете в WhatsApp. Рассказываете, что ищете.</p>
             </div>
             <div class="step">
                 <div class="step-number">2</div>
-                <div>
-                    <h4>Подбираем варианты</h4>
-                    <p>Показываем подходящие объекты от всех застройщиков.</p>
-                </div>
+                <h4>Подбираем варианты</h4>
+                <p>Показываем подходящие объекты от всех застройщиков.</p>
             </div>
             <div class="step">
                 <div class="step-number">3</div>
-                <div>
-                    <h4>Оформляем сделку</h4>
-                    <p>Рассрочка, маткапитал, скидки — всё оформим. Вы заезжаете.</p>
-                </div>
+                <h4>Оформляем сделку</h4>
+                <p>Рассрочка, маткапитал, скидки — всё оформим. Вы заезжаете.</p>
             </div>
         </div>
     </div>
 
+    <!-- Агенты -->
     <div class="section" id="agents">
         <h2>Наши агенты</h2>
         <p class="subtitle">Опытные специалисты к вашим услугам</p>
@@ -303,6 +377,7 @@
         </div>
     </div>
 
+    <!-- Контакты -->
     <div class="section" id="contact">
         <h2>Оставить заявку</h2>
         <p class="subtitle">Позвоните или напишите — ответим сразу</p>
@@ -312,6 +387,7 @@
         </div>
     </div>
 
+    <!-- Подвал -->
     <div class="footer">
         <p><strong>KVADRAT.</strong></p>
         <p>г. Грозный, ул. С.Ш. Лорсанова, 4</p>
@@ -319,6 +395,17 @@
         <p>Пн–Сб: 10:00 – 17:00</p>
         <a href="tel:+79671251240" class="btn">Связаться с нами</a>
     </div>
+
+    <script>
+        function openMenu() {
+            document.getElementById('menuOverlay').classList.add('open');
+            document.getElementById('menuPanel').classList.add('open');
+        }
+        function closeMenu() {
+            document.getElementById('menuOverlay').classList.remove('open');
+            document.getElementById('menuPanel').classList.remove('open');
+        }
+    </script>
 
 </body>
 </html>
