@@ -459,7 +459,7 @@
             var message = 'Здравствуйте! Меня зовут ' + name + '. Мой телефон: ' + phone + '. Хочу получить консультацию по недвижимости.';
             var url = 'https://wa.me/79671251240?text=' + encodeURIComponent(message);
             window.open(url, '_blank');
-            document.getElementById('contactForm').style.display = 'none';
+            document.getElementById('contactForm').reset();
             document.getElementById('formSuccess').style.display = 'block';
         });
     </script>
