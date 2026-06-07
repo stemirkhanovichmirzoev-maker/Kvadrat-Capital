@@ -434,5 +434,11 @@
             }, 500);
         });
     </script>
+    
+    <!-- Cookie-уведомление -->
+    <div id="cookieBanner" style="position:fixed; bottom:0; left:0; right:0; background:#0f172a; color:white; padding:14px 20px; display:flex; align-items:center; justify-content:space-between; z-index:999; font-size:13px; flex-wrap:wrap; gap:10px;">
+        <span>Мы используем cookie для улучшения работы сайта. Продолжая, вы соглашаетесь с политикой конфиденциальности.</span>
+        <button onclick="document.getElementById('cookieBanner').style.display='none'" style="background:#1e3a5f; color:white; border:none; padding:8px 20px; border-radius:6px; font-weight:600; cursor:pointer; white-space:nowrap;">OK</button>
+    </div>
 </body>
 </html>
