@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О компании — Kvadrat Capital</title>
+    <link rel="icon" type="image/png" href="Logo.png">
+    <meta name="description" content="Kvadrat Capital — агентство недвижимости в Грозном и Дубае. Работаем с 27 застройщиками, исламская рассрочка, материнский капитал.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Montserrat', sans-serif; background: #fff; color: #1a1a2e; }
+        
+        .header {
+            background: #0f172a; color: white; padding: 14px 20px;
+            display: flex; align-items: center; justify-content: space-between;
+            position: sticky; top: 0; z-index: 100;
+        }
+        .header a { color: white; text-decoration: none; }
+        .back-btn { font-size: 20px; font-weight: 600; }
+        
+        .section { padding: 60px 20px; max-width: 800px; margin: 0 auto; }
+        .section h1 { text-align: center; font-size: 32px; font-weight: 300; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; color: #0f172a; }
+        .section .subtitle { text-align: center; color: #64748b; margin-bottom: 40px; }
+        
+        .about-block { margin-bottom: 40px; }
+        .about-block h2 { font-size: 22px; color: #0f172a; margin-bottom: 12px; }
+        .about-block p { font-size: 15px; color: #475569; line-height: 1.7; margin-bottom: 10px; }
+        
+        .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 30px 0; }
+        .stat { background: #f8f9fb; padding: 24px; border-radius: 12px; text-align: center; }
+        .stat-number { font-size: 32px; font-weight: 700; color: #1e3a5f; }
+        .stat-label { font-size: 13px; color: #64748b; margin-top: 4px; }
+        
+        .footer {
+            background: #0f172a; color: white; text-align: center; padding: 30px 20px; margin-top: 40px;
+        }
+        .footer a { color: #94a3b8; }
+        
+        @media (max-width: 768px) {
+            .section h1 { font-size: 24px; }
+            .stats { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <a href="index.html" class="back-btn">← Назад</a>
+        <img src="Logo.png" alt="Kvadrat" style="height:36px;">
+        <a href="tel:+79671251240">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </a>
+    </div>
+
+    <div class="section">
+        <h1>О компании</h1>
+        <p class="subtitle">Kvadrat Capital — ваш надёжный партнёр в сфере недвижимости</p>
+        
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number">27</div>
+                <div class="stat-label">застройщиков-партнёров</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">40+</div>
+                <div class="stat-label">агентов в команде</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">2</div>
+                <div class="stat-label">страны присутствия</div>
+            </div>
+        </div>
+        
+        <div class="about-block">
+            <h2>Кто мы</h2>
+            <p>Kvadrat Capital — агентство недвижимости, работающее в Чеченской Республике и Объединённых Арабских Эмиратах. Мы сотрудничаем напрямую с ведущими застройщиками Грозного и Дубая, предлагая клиентам лучшие условия без посредников.</p>
+            <p>Наша миссия — сделать процесс покупки недвижимости простым, прозрачным и доступным для каждой семьи. Мы предлагаем исламскую рассрочку до 6 лет, варианты без первоначального взноса, принимаем материнский капитал и предоставляем скидки участникам СВО и пенсионерам.</p>
+        </div>
+        
+        <div class="about-block">
+            <h2>Почему мы</h2>
+            <p>— Работаем напрямую с 27 застройщиками<br>
+            — Исламская рассрочка без процентов<br>
+            — Юридическая чистота каждой сделки<br>
+            — Более 40 профессиональных агентов<br>
+            — Сопровождение на всех этапах: от подбора до оформления</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p><strong>KVADRAT CAPITAL</strong></p>
+        <p>г. Грозный, ул. С.Ш. Лорсанова, 4</p>
+        <p><a href="tel:+79671251240">+7 967 125-12-40</a></p>
+    </div>
+
+</body>
+</html>
