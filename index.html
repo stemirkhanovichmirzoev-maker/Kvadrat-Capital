@@ -326,15 +326,19 @@
         <h2>Оставить заявку</h2>
         <p class="subtitle">Оставьте контакты — мы перезвоним в течение 15 минут</p>
         
-        <form id="contactForm" action="https://formspree.io/f/xdaveznz" method="POST" style="max-width:500px; margin:0 auto;">
-            <input type="text" id="name" name="name" placeholder="Ваше имя" required ...>
-<input type="tel" id="phone" name="phone" placeholder="Ваш телефон" required ...>
-            <button type="submit" class="btn" style="width:100%; border:none; cursor:pointer;">Отправить заявку</button>
+        <form id="contactForm" action="https://formspree.io/f/xdaveznz" method="POST" style="max-width:500px; margin:0 auto; background:#f8f9fb; padding:30px; border-radius:16px; box-shadow:0 2px 10px rgba(0,0,0,0.04);">
+            <label style="display:block; margin-bottom:6px; font-weight:600; color:#0f172a; font-size:14px;">Ваше имя</label>
+            <input type="text" name="name" placeholder="Иван Иванов" required style="width:100%; padding:14px 16px; margin-bottom:20px; border:1px solid #e2e8f0; border-radius:10px; font-size:16px; font-family:Montserrat,sans-serif; background:white;">
+            
+            <label style="display:block; margin-bottom:6px; font-weight:600; color:#0f172a; font-size:14px;">Ваш телефон</label>
+            <input type="tel" name="phone" placeholder="+7 967 125-12-40" required style="width:100%; padding:14px 16px; margin-bottom:24px; border:1px solid #e2e8f0; border-radius:10px; font-size:16px; font-family:Montserrat,sans-serif; background:white;">
+            
+            <button type="submit" class="btn" style="width:100%; border:none; cursor:pointer; padding:16px; font-size:16px; font-weight:600; border-radius:10px;">Отправить заявку</button>
         </form>
         
-        <p id="formSuccess" style="display:none; text-align:center; color:#1e3a5f; font-weight:600; margin-top:16px;">Спасибо! Мы свяжемся с вами в ближайшее время.</p>
+        <p id="formSuccess" style="display:none; text-align:center; color:#1e3a5f; font-weight:600; margin-top:20px; font-size:16px;">Спасибо! Мы свяжемся с вами в ближайшее время.</p>
         
-        <p style="text-align:center; margin-top:16px; color:#64748b;">Или свяжитесь напрямую</p>
+        <p style="text-align:center; margin-top:20px; color:#64748b;">Или свяжитесь напрямую</p>
         <div class="contact-buttons">
             <a href="tel:+79671251240" class="btn">Позвонить</a>
             <a href="https://wa.me/79671251240" class="btn btn-outline" style="color:#0f172a; border-color:#1e3a5f;">WhatsApp</a>
