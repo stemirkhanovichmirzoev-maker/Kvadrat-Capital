@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог недвижимости — Kvadrat Capital</title>
+    <link rel="icon" type="image/png" href="Logo.png">
+    <meta name="description" content="Каталог недвижимости от Kvadrat Capital. Квартиры, дома, участки в Чеченской Республике. Исламская рассрочка, материнский капитал.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Montserrat', sans-serif; background: #fff; color: #1a1a2e; }
+        
+        .header {
+            background: #0f172a; color: white; padding: 14px 20px;
+            display: flex; align-items: center; justify-content: space-between;
+            position: sticky; top: 0; z-index: 100;
+        }
+        .header a { color: white; text-decoration: none; }
+        .back-btn { font-size: 20px; font-weight: 600; }
+        
+        .section { padding: 60px 20px; max-width: 1100px; margin: 0 auto; }
+        .section h1 { text-align: center; font-size: 32px; font-weight: 300; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; color: #0f172a; }
+        .section .subtitle { text-align: center; color: #64748b; margin-bottom: 40px; }
+        
+        .catalog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        
+        .catalog-card {
+            background: #f8f9fb; border-radius: 16px; overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06); transition: 0.2s;
+        }
+        .catalog-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
+        .catalog-card .card-img {
+            width: 100%; height: 220px; object-fit: cover; background: #e2e8f0;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 48px; color: #94a3b8;
+        }
+        .catalog-card .card-body { padding: 20px; }
+        .catalog-card .card-body h3 { font-size: 18px; margin-bottom: 4px; color: #0f172a; }
+        .catalog-card .card-body .location { font-size: 13px; color: #64748b; margin-bottom: 12px; }
+        .catalog-card .card-body .price { font-size: 22px; font-weight: 700; color: #1e3a5f; margin-bottom: 12px; }
+        .catalog-card .card-body .details { font-size: 13px; color: #475569; margin-bottom: 4px; }
+        .catalog-card .card-body .tag {
+            display: inline-block; background: #1e3a5f; color: white;
+            padding: 4px 10px; border-radius: 4px; font-size: 11px; margin-top: 10px;
+        }
+        .catalog-card .btn {
+            display: block; text-align: center; margin-top: 14px;
+            background: #1e3a5f; color: white; padding: 10px; border-radius: 8px;
+            text-decoration: none; font-weight: 600; font-size: 14px;
+        }
+        
+        .footer {
+            background: #0f172a; color: white; text-align: center; padding: 30px 20px; margin-top: 40px;
+        }
+        .footer a { color: #94a3b8; }
+        
+        @media (max-width: 768px) {
+            .section h1 { font-size: 24px; }
+            .catalog-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 480px) {
+            .catalog-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <a href="index.html" class="back-btn">← Назад</a>
+        <img src="Logo.png" alt="Kvadrat" style="height:36px;">
+        <a href="tel:+79671251240">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </a>
+    </div>
+
+    <div class="section">
+        <h1>Каталог недвижимости</h1>
+        <p class="subtitle">Лучшие предложения от застройщиков Чеченской Республики</p>
+        
+        <div class="catalog-grid">
+            
+            <!-- ЖК Аль-Сахра -->
+            <div class="catalog-card">
+                <img src="al-sahra.JPG" alt="ЖК Аль-Сахра" class="card-img" style="object-fit:cover;">
+                <div class="card-body">
+                    <h3>ЖК Аль-Сахра</h3>
+                    <p class="location">Грозный, Новый проспект Путина</p>
+                    <p class="price">от 2 732 400 ₽</p>
+                    <p class="details">Сдача: 4 квартал 2027</p>
+                    <span class="tag">Квартиры</span>
+                    <a href="tel:+79671251240" class="btn">Узнать подробнее</a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="footer">
+        <p><strong>KVADRAT CAPITAL</strong></p>
+        <p>г. Грозный, ул. С.Ш. Лорсанова, 4</p>
+        <p><a href="tel:+79671251240">+7 967 125-12-40</a></p>
+    </div>
+
+</body>
+</html>
