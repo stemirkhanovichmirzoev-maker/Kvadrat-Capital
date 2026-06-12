@@ -86,14 +86,32 @@
                 <div class="card-body">
                     <h3>ЖК Аль-Сахра</h3>
                     <p class="location">Грозный, Новый проспект Путина</p>
-                    <p class="price">от 2 732 400 ₽</p>
+                    <p class="price">от 2 400 000 ₽</p>
                     <p class="details">Сдача: 4 квартал 2027</p>
                     <span class="tag">Квартиры</span>
-                    <a href="tel:+79671251240" class="btn">Узнать подробнее</a>
+                    <button onclick="toggleDetail(this)" class="btn" style="border:none; cursor:pointer; width:100%;">Подробнее</button>
+                    
+                    <div class="detail-info" style="display:none; margin-top:16px; padding-top:16px; border-top:1px solid #e2e8f0;">
+                        <p style="font-weight:600; margin-bottom:10px; color:#0f172a;">Планировки и цены:</p>
+                        <p style="font-size:14px; color:#475569;">1-комнатные — от 2 400 000 ₽</p>
+                        <p style="font-size:14px; color:#475569;">2-комнатные — от 3 000 000 ₽</p>
+                        <p style="font-size:14px; color:#475569;">3-комнатные — от 4 000 000 ₽</p>
+                        
+                        <p style="font-weight:600; margin-top:14px; margin-bottom:10px; color:#0f172a;">Что есть рядом:</p>
+                        <p style="font-size:14px; color:#475569;">✅ Охрана</p>
+                        <p style="font-size:14px; color:#475569;">✅ Аптеки</p>
+                        <p style="font-size:14px; color:#475569;">✅ Школа</p>
+                        <p style="font-size:14px; color:#475569;">✅ Детский сад</p>
+                        <p style="font-size:14px; color:#475569;">✅ Магазины</p>
+                        <p style="font-size:14px; color:#475569;">✅ ТЦ</p>
+                        <p style="font-size:14px; color:#475569;">✅ Кафе и рестораны</p>
+                        <p style="font-size:14px; color:#475569;">✅ Мечеть</p>
+                        <p style="font-size:14px; color:#475569;">✅ Зона отдыха</p>
+                        
+                        <a href="tel:+79671251240" class="btn" style="margin-top:14px;">Позвонить</a>
+                    </div>
                 </div>
             </div>
-            
-        </div>
     </div>
 
     <div class="footer">
@@ -101,6 +119,17 @@
         <p>г. Грозный, ул. С.Ш. Лорсанова, 4</p>
         <p><a href="tel:+79671251240">+7 967 125-12-40</a></p>
     </div>
-
+<script>
+        function toggleDetail(btn) {
+            var detail = btn.nextElementSibling;
+            if (detail.style.display === 'none' || detail.style.display === '') {
+                detail.style.display = 'block';
+                btn.textContent = 'Скрыть';
+            } else {
+                detail.style.display = 'none';
+                btn.textContent = 'Подробнее';
+            }
+        }
+    </script>
 </body>
 </html>
