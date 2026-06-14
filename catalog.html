@@ -389,10 +389,19 @@
             var calcBlock = btn.parentElement;
             var pricePerSqm = Number(calcBlock.querySelector('.calc-floor').value);
             var area = Number(calcBlock.querySelector('.calc-area').value);
-            var down = Number(calcBlock.querySelector('.calc-down').value) || 0;
+            var downInput = calcBlock.querySelector('.calc-down');
+            var down = Number(downInput.value) || 0;
             var period = Number(calcBlock.querySelector('.calc-period').value);
             var resultDiv = calcBlock.querySelector('.calc-result');
             var minDown = 5000 * area;
+            
+            downInput.placeholder = 'Минимум ' + minDown.toLocaleString('ru-RU') + ' ₽';
+            downInput.min = minDown;
+            
+            if (down === 0) {
+                down = minDown;
+                downInput.value = minDown;
+            }
             if (down < minDown) {
                 resultDiv.style.display = 'block';
                 resultDiv.innerHTML = '<span style="color:#c0392b;">Минимальный взнос: ' + minDown.toLocaleString('ru-RU') + ' ₽</span>';
@@ -412,10 +421,19 @@
             var calcBlock = btn.parentElement;
             var pricePerSqm = Number(calcBlock.querySelector('.calc-floor').value);
             var area = Number(calcBlock.querySelector('.calc-area').value);
-            var down = Number(calcBlock.querySelector('.calc-down').value) || 0;
+            var downInput = calcBlock.querySelector('.calc-down');
+            var down = Number(downInput.value) || 0;
             var period = Number(calcBlock.querySelector('.calc-period').value);
             var resultDiv = calcBlock.querySelector('.calc-result');
             var minDown = 3000 * area;
+            
+            downInput.placeholder = 'Минимум ' + minDown.toLocaleString('ru-RU') + ' ₽';
+            downInput.min = minDown;
+            
+            if (down === 0) {
+                down = minDown;
+                downInput.value = minDown;
+            }
             if (down < minDown) {
                 resultDiv.style.display = 'block';
                 resultDiv.innerHTML = '<span style="color:#c0392b;">Минимальный взнос: ' + minDown.toLocaleString('ru-RU') + ' ₽</span>';
@@ -435,10 +453,19 @@
             var calcBlock = btn.parentElement;
             var pricePerSqm = Number(calcBlock.querySelector('.calc-floor').value);
             var area = Number(calcBlock.querySelector('.calc-area').value);
-            var down = Number(calcBlock.querySelector('.calc-down').value) || 0;
+            var downInput = calcBlock.querySelector('.calc-down');
+            var down = Number(downInput.value) || 0;
             var period = Number(calcBlock.querySelector('.calc-period').value);
             var resultDiv = calcBlock.querySelector('.calc-result');
             var minDown = 5000 * area;
+            
+            downInput.placeholder = 'Минимум ' + minDown.toLocaleString('ru-RU') + ' ₽';
+            downInput.min = minDown;
+            
+            if (down === 0) {
+                down = minDown;
+                downInput.value = minDown;
+            }
             if (down < minDown) {
                 resultDiv.style.display = 'block';
                 resultDiv.innerHTML = '<span style="color:#c0392b;">Минимальный взнос: ' + minDown.toLocaleString('ru-RU') + ' ₽</span>';
