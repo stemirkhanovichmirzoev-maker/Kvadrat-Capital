@@ -50,6 +50,25 @@
             text-decoration: none; font-weight: 600; font-size: 14px;
         }
         
+        .calc-block {
+            display:none; margin-top:16px; padding-top:16px;
+            border-top:1px solid #e2e8f0;
+        }
+        .calc-block input, .calc-block select {
+            width:100%; padding:10px; margin-bottom:10px;
+            border:1px solid #e2e8f0; border-radius:8px;
+            font-size:14px; font-family:Montserrat,sans-serif;
+        }
+        .calc-block label {
+            font-size:13px; font-weight:600; color:#0f172a;
+            display:block; margin-bottom:4px;
+        }
+        .calc-result {
+            display:none; margin-top:12px; padding:14px;
+            background:#e8f0fe; border-radius:8px; text-align:center;
+            font-weight:700; color:#0f172a;
+        }
+        
         .footer {
             background: #0f172a; color: white; text-align: center; padding: 30px 20px; margin-top: 40px;
             width: 100vw; position: relative; left: 50%; right: 50%;
@@ -82,7 +101,7 @@
         
         <div class="catalog-grid">
             
-          <!-- ЖК Ривьера -->
+            <!-- ЖК Ривьера -->
             <div class="catalog-card">
                 <img src="Riviera.jpg" alt="ЖК Ривьера" class="card-img" style="object-fit:cover;">
                 <div class="card-body">
@@ -144,10 +163,49 @@
                         
                         <a href="tel:+79671251240" class="btn" style="margin-top:14px;">Позвонить</a>
                     </div>
+                    
+                    <button onclick="toggleCalc(this)" class="btn" style="border:none; cursor:pointer; width:100%; background:#0f172a; margin-top:10px;">Рассчитать рассрочку</button>
+                    
+                    <div class="calc-block">
+                        <label>Этаж</label>
+                        <select class="calc-floor">
+                            <option value="65000">5–11 этаж (65 000 ₽/м²)</option>
+                            <option value="62000">12–18 этаж (62 000 ₽/м²)</option>
+                            <option value="59000">19–28 этаж (59 000 ₽/м²)</option>
+                        </select>
+                        
+                        <label>Площадь</label>
+                        <select class="calc-area">
+                            <option value="35.90">1-комн. 35,90 м²</option>
+                            <option value="38.72">1-комн. 38,72 м²</option>
+                            <option value="38.76">1-комн. 38,76 м²</option>
+                            <option value="42.63">1-комн. 42,63 м²</option>
+                            <option value="44.96">1-комн. 44,96 м²</option>
+                            <option value="48.95">1-комн. 48,95 м²</option>
+                            <option value="63.90">2-комн. 63,90 м²</option>
+                            <option value="64.13">2-комн. 64,13 м²</option>
+                        </select>
+                        
+                        <label>Сумма взноса (₽)</label>
+                        <input type="number" class="calc-down" placeholder="Минимум 5 000 ₽ за м²" value="0">
+                        <p style="font-size:11px; color:#64748b; margin-top:-6px; margin-bottom:10px;">Минимальный взнос: 5 000 ₽ × площадь</p>
+                        
+                        <label>Срок рассрочки</label>
+                        <select class="calc-period">
+                            <option value="12">1 год (наценка 0%)</option>
+                            <option value="24">2 года (наценка 10%)</option>
+                            <option value="36">3 года (наценка 20%)</option>
+                            <option value="48">4 года (наценка 30%)</option>
+                            <option value="60">5 лет (наценка 35%)</option>
+                        </select>
+                        
+                        <button onclick="calculateRiviera(this)" class="btn" style="width:100%; border:none; cursor:pointer;">Рассчитать</button>
+                        <div class="calc-result"></div>
+                    </div>
                 </div>
             </div>
             
-              <!-- ЖК Мичурина -->
+            <!-- ЖК Мичурина -->
             <div class="catalog-card">
                 <img src="michurina.jpg" alt="ЖК Мичурина" class="card-img" style="object-fit:cover;">
                 <div class="card-body">
@@ -291,7 +349,7 @@
                 <div class="card-body">
                     <h3>ЖК Аль-Сахра</h3>
                     <p class="location">Грозный, Новый проспект Путина</p>
-                    <p class="price">от 2 732 400 ₽</p>
+                    <p class="price">от 2 400 000 ₽</p>
                     <p class="details">Сдача: 4 квартал 2027</p>
                     <span class="tag">Квартиры</span>
                     <button onclick="toggleDetail(this)" class="btn" style="border:none; cursor:pointer; width:100%;">Подробнее</button>
@@ -373,6 +431,51 @@
                 detail.style.display = 'none';
                 btn.textContent = 'Подробнее';
             }
+        }
+        
+        function toggleCalc(btn) {
+            var calc = btn.nextElementSibling;
+            if (calc.style.display === 'none' || calc.style.display === '') {
+                calc.style.display = 'block';
+                btn.textContent = 'Скрыть калькулятор';
+            } else {
+                calc.style.display = 'none';
+                btn.textContent = 'Рассчитать рассрочку';
+            }
+        }
+        
+        function calculateRiviera(btn) {
+            var calcBlock = btn.parentElement;
+            var pricePerSqm = Number(calcBlock.querySelector('.calc-floor').value);
+            var area = Number(calcBlock.querySelector('.calc-area').value);
+            var down = Number(calcBlock.querySelector('.calc-down').value) || 0;
+            var period = Number(calcBlock.querySelector('.calc-period').value);
+            var resultDiv = calcBlock.querySelector('.calc-result');
+            
+            var minDown = 5000 * area;
+            
+            if (down < minDown) {
+                resultDiv.style.display = 'block';
+                resultDiv.innerHTML = '<span style="color:#c0392b;">Минимальный взнос: ' + minDown.toLocaleString('ru-RU') + ' ₽</span>';
+                return;
+            }
+            
+            var markupRates = {12: 0, 24: 10, 36: 20, 48: 30, 60: 35};
+            var markupPercent = markupRates[period] || 0;
+            
+            var basePrice = pricePerSqm * area;
+            var afterDown = basePrice - down;
+            var total = afterDown + (afterDown * markupPercent / 100);
+            var monthly = Math.ceil(total / period);
+            
+            resultDiv.style.display = 'block';
+            resultDiv.innerHTML = 
+                '<p style="font-size:13px;color:#64748b;">Стоимость квартиры: ' + basePrice.toLocaleString('ru-RU') + ' ₽</p>' +
+                '<p style="font-size:13px;color:#64748b;">Взнос: ' + down.toLocaleString('ru-RU') + ' ₽</p>' +
+                '<p style="font-size:13px;color:#64748b;">Наценка: ' + markupPercent + '%</p>' +
+                '<p style="font-size:13px;color:#64748b;">Сумма к выплате: ' + total.toLocaleString('ru-RU') + ' ₽</p>' +
+                '<p style="font-size:22px;font-weight:700;color:#0f172a;margin-top:8px;">' + monthly.toLocaleString('ru-RU') + ' ₽/мес</p>' +
+                '<p style="font-size:12px;color:#64748b;">Срок: ' + period + ' месяцев</p>';
         }
     </script>
 
