@@ -205,6 +205,96 @@
         
         <div class="catalog-grid">
             
+            <!-- ЖК Орион -->
+            <div class="catalog-card">
+                <img src="orion.jpg" alt="ЖК Орион" class="card-img">
+                <div class="card-body">
+                    <h3>ЖК Орион</h3>
+                    <p class="location">Грозный, ул. Абдаллы II Бен Аль-Хусейна</p>
+                    <p class="price">от 63 000 ₽/м²</p>
+                    <p class="details">Сдача: 2 квартал 2030</p>
+                    <span class="tag">Квартиры</span>
+                    <button onclick="toggleDetail(this)" class="btn" style="width:100%;">Подробнее</button>
+                    <div class="detail-info">
+                        <p style="font-weight:600; margin-bottom:8px; color:#5b9ef5;">Планировки:</p>
+                        <p>1-комнатные — от 45,84 м²</p>
+                        <p>2-комнатные — от 64,25 м²</p>
+                        <p>3-комнатные — от 86,20 м²</p>
+                        <p>4-комнатные — от 96,91 м²</p>
+                        <p style="font-weight:600; margin-top:10px; margin-bottom:8px; color:#5b9ef5;">Что есть рядом:</p>
+                        <p>Охрана, Аптеки, Школа, Детский сад, Магазины, ТЦ Минутка, Кафе и рестораны, Мечеть, Зона отдыха</p>
+                        <a href="tel:+79671251240" class="btn" style="margin-top:10px;">Позвонить</a>
+                    </div>
+                    <button onclick="toggleCalc(this)" class="btn btn-dark" style="width:100%; margin-top:8px;">Рассчитать рассрочку</button>
+                    <div class="calc-block">
+                        <label>Тип оплаты</label>
+                        <select class="calc-payment-type">
+                            <option value="with-down">С взносом от 50% (или наличные)</option>
+                            <option value="no-down">Без взноса (или до 50%)</option>
+                        </select>
+                        <label>Этаж</label>
+                        <select class="calc-floor">
+                            <option value="65000">3–5 этаж</option>
+                            <option value="64000">6–10 этаж</option>
+                            <option value="63000">11+ этаж</option>
+                        </select>
+                        <label>Площадь</label>
+                        <select class="calc-area">
+                            <option value="45.84">1-комн. 45,84 м²</option>
+                            <option value="46.38">1-комн. 46,38 м²</option>
+                            <option value="47.66">1-комн. 47,66 м²</option>
+                            <option value="47.87">1-комн. 47,87 м²</option>
+                            <option value="47.93">1-комн. 47,93 м²</option>
+                            <option value="48.47">1-комн. 48,47 м²</option>
+                            <option value="49.01">1-комн. 49,01 м²</option>
+                            <option value="49.61">1-комн. 49,61 м²</option>
+                            <option value="49.78">1-комн. 49,78 м²</option>
+                            <option value="50.23">1-комн. 50,23 м²</option>
+                            <option value="50.38">1-комн. 50,38 м²</option>
+                            <option value="50.56">1-комн. 50,56 м²</option>
+                            <option value="51.04">1-комн. 51,04 м²</option>
+                            <option value="51.64">1-комн. 51,64 м²</option>
+                            <option value="53.38">1-комн. 53,38 м²</option>
+                            <option value="54.22">1-комн. 54,22 м²</option>
+                            <option value="55.06">1-комн. 55,06 м²</option>
+                            <option value="56.13">1-комн. 56,13 м²</option>
+                            <option value="64.25">2-комн. 64,25 м²</option>
+                            <option value="68.57">2-комн. 68,57 м²</option>
+                            <option value="68.71">2-комн. 68,71 м²</option>
+                            <option value="70.21">2-комн. 70,21 м²</option>
+                            <option value="71.56">2-комн. 71,56 м²</option>
+                            <option value="72.03">2-комн. 72,03 м²</option>
+                            <option value="72.06">2-комн. 72,06 м²</option>
+                            <option value="72.46">2-комн. 72,46 м²</option>
+                            <option value="72.95">2-комн. 72,95 м²</option>
+                            <option value="73.47">2-комн. 73,47 м²</option>
+                            <option value="73.80">2-комн. 73,80 м²</option>
+                            <option value="86.20">3-комн. 86,20 м²</option>
+                            <option value="88.29">3-комн. 88,29 м²</option>
+                            <option value="89.68">3-комн. 89,68 м²</option>
+                            <option value="96.91">4-комн. 96,91 м²</option>
+                            <option value="99.00">4-комн. 99,00 м²</option>
+                            <option value="99.05">4-комн. 99,05 м²</option>
+                            <option value="121.33">4-комн. 121,33 м²</option>
+                            <option value="124.07">4-комн. 124,07 м²</option>
+                            <option value="168.23">3-комн. 168,23 м²</option>
+                        </select>
+                        <label>Сумма взноса (₽)</label>
+                        <input type="number" class="calc-down" placeholder="Минимум 5 000 ₽ × площадь" value="">
+                        <label>Срок рассрочки</label>
+                        <select class="calc-period">
+                            <option value="12">1 год (12 месяцев)</option>
+                            <option value="24">2 года (24 месяца)</option>
+                            <option value="36">3 года (36 месяцев)</option>
+                            <option value="48">4 года (48 месяцев)</option>
+                            <option value="60">5 лет (60 месяцев)</option>
+                        </select>
+                        <button onclick="calculateOrion(this)" class="btn" style="width:100%;">Рассчитать</button>
+                        <div class="calc-result"></div>
+                    </div>
+                </div>
+            </div>
+            
             <!-- ЖК Ривьера -->
             <div class="catalog-card">
                 <img src="Riviera.jpg" alt="ЖК Ривьера" class="card-img">
@@ -463,6 +553,38 @@
                 calc.style.display = 'none';
                 btn.textContent = 'Рассчитать рассрочку';
             }
+        }
+        
+        function calculateOrion(btn) {
+            var calcBlock = btn.parentElement;
+            var paymentType = calcBlock.querySelector('.calc-payment-type').value;
+            var pricePerSqm = Number(calcBlock.querySelector('.calc-floor').value);
+            var area = Number(calcBlock.querySelector('.calc-area').value);
+            var downInput = calcBlock.querySelector('.calc-down');
+            var down = Number(downInput.value) || 0;
+            var period = Number(calcBlock.querySelector('.calc-period').value);
+            var resultDiv = calcBlock.querySelector('.calc-result');
+            var minDown = 5000 * area;
+            
+            if (paymentType === 'no-down') {
+                pricePerSqm += 2000;
+            }
+            
+            downInput.placeholder = 'Минимум ' + minDown.toLocaleString('ru-RU') + ' ₽';
+            if (down === 0) { down = minDown; downInput.value = minDown; }
+            if (down < minDown) {
+                resultDiv.style.display = 'block';
+                resultDiv.innerHTML = '<span style="color:#ef4444;">Минимальный взнос: ' + minDown.toLocaleString('ru-RU') + ' ₽</span>';
+                return;
+            }
+            
+            var markupRates = {12: 0, 24: 15, 36: 25, 48: 30, 60: 35};
+            var basePrice = pricePerSqm * area;
+            var afterDown = basePrice - down;
+            var total = afterDown + (afterDown * (markupRates[period]||0) / 100);
+            var monthly = Math.ceil(total / period);
+            resultDiv.style.display = 'block';
+            resultDiv.innerHTML = '<p style="font-size:24px;font-weight:700;color:#5b9ef5;">' + monthly.toLocaleString('ru-RU') + ' ₽/мес</p><p style="font-size:12px;color:var(--gray);">Срок: ' + period + ' мес.</p><a href="tel:+79671251240" class="btn" style="margin-top:8px;">Забронировать</a>';
         }
         
         function calculateRiviera(btn) {
