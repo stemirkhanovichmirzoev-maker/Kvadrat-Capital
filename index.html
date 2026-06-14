@@ -5,7 +5,557 @@
 <meta name="google-site-verification" content="mHVFhP8gholc_5LSimlId9AvBIT9ruqNyLmQYj3Wu2A">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Агентство недвижимости «Kvadrat» — Чеченская Республика</title>
+    <title>Агентство <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kvadrat Capital — Премиальное агентство недвижимости в Грозном</title>
+    <link rel="icon" type="image/png" href="Logo.png">
+    <meta name="description" content="Kvadrat Capital — премиальное агентство недвижимости в Грозном. Исламская рассрочка до 6 лет, материнский капитал, без первого взноса.">
+    <meta name="google-site-verification" content="mHVFhP8gholc_5LSimlId9AvBIT9ruqNyLmQYj3Wu2A">
+    <meta name="keywords" content="агентство недвижимости Грозный, купить квартиру Грозный, недвижимость Грозный, исламская рассрочка, материнский капитал, Kvadrat Capital">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap');
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        :root {
+            --black: #0a0a0a;
+            --gold: #c9a96e;
+            --gold-light: #d4b87a;
+            --dark: #111111;
+            --gray: #1a1a1a;
+            --white: #ffffff;
+            --text: #b0b0b0;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--black);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Прелоадер */
+        #preloader {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: var(--black); z-index: 9999; display: flex;
+            align-items: center; justify-content: center; transition: opacity 0.6s;
+        }
+        #preloader.hidden { opacity: 0; pointer-events: none; }
+        #preloader .loader {
+            width: 50px; height: 50px; border: 2px solid rgba(201,169,110,0.2);
+            border-top-color: var(--gold); border-radius: 50%; animation: spin 1s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        
+        /* Шапка */
+        .header {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            background: rgba(10,10,10,0.95); backdrop-filter: blur(20px);
+            padding: 16px 30px; display: flex; align-items: center;
+            justify-content: space-between; transition: 0.3s;
+            border-bottom: 1px solid rgba(201,169,110,0.1);
+        }
+        .header.scrolled { padding: 10px 30px; background: rgba(10,10,10,0.98); }
+        
+        .burger {
+            background: none; border: none; cursor: pointer;
+            display: flex; flex-direction: column; gap: 5px; padding: 5px;
+        }
+        .burger span {
+            display: block; width: 26px; height: 2px;
+            background: var(--gold); transition: 0.3s; border-radius: 1px;
+        }
+        .burger:hover span { background: var(--white); }
+        
+        .header-logo { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--gold); letter-spacing: 3px; text-decoration: none; }
+        .header-phone {
+            display: flex; align-items: center; gap: 8px;
+            color: var(--white); text-decoration: none; font-weight: 500;
+            font-size: 14px; transition: 0.3s;
+        }
+        .header-phone:hover { color: var(--gold); }
+        .header-phone svg { stroke: var(--gold); }
+        
+        /* Меню */
+        .menu-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.8); z-index: 2000; opacity: 0;
+            pointer-events: none; transition: 0.4s;
+        }
+        .menu-overlay.open { opacity: 1; pointer-events: all; }
+        
+        .menu-panel {
+            position: fixed; top: 0; right: -350px; width: 320px; height: 100%;
+            background: var(--gray); z-index: 3000; padding: 60px 30px;
+            transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            border-left: 1px solid rgba(201,169,110,0.2);
+        }
+        .menu-panel.open { right: 0; }
+        
+        .menu-panel .close-btn {
+            position: absolute; top: 20px; right: 20px;
+            background: none; border: none; color: var(--gold);
+            font-size: 28px; cursor: pointer; transition: 0.3s;
+        }
+        .menu-panel .close-btn:hover { color: var(--white); }
+        
+        .menu-panel .menu-logo {
+            font-family: 'Playfair Display', serif; font-size: 28px;
+            color: var(--gold); margin-bottom: 30px; letter-spacing: 4px;
+        }
+        .menu-panel a {
+            display: block; color: var(--white); text-decoration: none;
+            padding: 14px 0; font-size: 16px; font-weight: 300;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            transition: 0.3s; position: relative;
+        }
+        .menu-panel a:hover {
+            color: var(--gold); padding-left: 10px;
+        }
+        .menu-panel a::before {
+            content: ''; position: absolute; left: 0; bottom: 0;
+            width: 0; height: 1px; background: var(--gold); transition: 0.3s;
+        }
+        .menu-panel a:hover::before { width: 100%; }
+        
+        .menu-socials {
+            display: flex; gap: 15px; margin-top: 30px;
+        }
+        .menu-socials a {
+            width: 40px; height: 40px; border: 1px solid rgba(201,169,110,0.3);
+            border-radius: 50%; display: flex; align-items: center;
+            justify-content: center; color: var(--gold); text-decoration: none;
+            font-size: 16px; transition: 0.3s; padding: 0;
+        }
+        .menu-socials a:hover {
+            background: var(--gold); color: var(--black); padding-left: 0;
+        }
+        .menu-socials a::before { display: none; }
+        
+        /* Hero */
+        .hero {
+            min-height: 100vh; display: flex; align-items: center;
+            justify-content: center; text-align: center; padding: 120px 20px 60px;
+            position: relative; overflow: hidden;
+            background: var(--black);
+        }
+        .hero-bg {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: url('Foto.JPG') center/cover;
+            opacity: 0.35; transform: scale(1.1);
+            transition: transform 0.8s ease-out;
+        }
+        .hero:hover .hero-bg { transform: scale(1); }
+        .hero-content { position: relative; z-index: 1; max-width: 800px; }
+        
+        .hero-badge {
+            display: inline-block; border: 1px solid var(--gold);
+            padding: 8px 20px; font-size: 11px; letter-spacing: 4px;
+            text-transform: uppercase; color: var(--gold); margin-bottom: 30px;
+            animation: fadeInUp 1s ease;
+        }
+        
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 72px; font-weight: 700; color: var(--white);
+            line-height: 1.1; margin-bottom: 20px;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+        .hero h1 span { color: var(--gold); }
+        
+        .hero p {
+            font-size: 18px; font-weight: 300; color: var(--text);
+            max-width: 600px; margin: 0 auto 30px;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+        
+        .hero-buttons {
+            display: flex; gap: 15px; flex-wrap: wrap;
+            justify-content: center;
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+        
+        .btn {
+            display: inline-block; padding: 16px 36px;
+            font-family: 'Montserrat', sans-serif; font-size: 14px;
+            font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+            text-decoration: none; transition: 0.4s; cursor: pointer;
+            border-radius: 2px;
+        }
+        .btn-gold {
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            color: var(--black); border: none;
+        }
+        .btn-gold:hover {
+            background: linear-gradient(135deg, var(--gold-light), var(--gold));
+            transform: translateY(-2px); box-shadow: 0 10px 30px rgba(201,169,110,0.3);
+        }
+        .btn-outline {
+            background: transparent; border: 1px solid var(--gold);
+            color: var(--gold);
+        }
+        .btn-outline:hover {
+            background: var(--gold); color: var(--black);
+            transform: translateY(-2px);
+        }
+        
+        /* Секции */
+        .section {
+            padding: 80px 20px; max-width: 1200px; margin: 0 auto;
+            position: relative;
+        }
+        .section-label {
+            text-align: center; font-size: 11px; letter-spacing: 4px;
+            text-transform: uppercase; color: var(--gold); margin-bottom: 16px;
+        }
+        .section h2 {
+            text-align: center; font-family: 'Playfair Display', serif;
+            font-size: 42px; font-weight: 700; margin-bottom: 16px;
+            color: var(--white);
+        }
+        .section .subtitle {
+            text-align: center; color: var(--text); font-size: 15px;
+            font-weight: 300; margin-bottom: 50px; max-width: 500px;
+            margin-left: auto; margin-right: auto;
+        }
+        .divider {
+            width: 60px; height: 2px; background: var(--gold);
+            margin: 0 auto 30px;
+        }
+        
+        /* Преимущества */
+        .features-grid {
+            display: grid; grid-template-columns: repeat(2, 1fr);
+            gap: 1px; background: rgba(255,255,255,0.03);
+        }
+        .feature-item {
+            background: var(--gray); padding: 40px 30px;
+            text-align: center; transition: 0.4s; cursor: default;
+            position: relative; overflow: hidden;
+        }
+        .feature-item::before {
+            content: ''; position: absolute; top: 0; left: 0;
+            width: 100%; height: 2px; background: var(--gold);
+            transform: scaleX(0); transition: 0.4s;
+        }
+        .feature-item:hover::before { transform: scaleX(1); }
+        .feature-item:hover { background: #1a1a1a; }
+        .feature-icon {
+            width: 60px; height: 60px; margin: 0 auto 16px;
+            border: 1px solid rgba(201,169,110,0.3); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            transition: 0.4s;
+        }
+        .feature-item:hover .feature-icon {
+            background: var(--gold); border-color: var(--gold);
+        }
+        .feature-item:hover .feature-icon svg { stroke: var(--black); }
+        .feature-icon svg { stroke: var(--gold); transition: 0.4s; }
+        .feature-item h4 { font-size: 15px; font-weight: 600; margin-bottom: 8px; letter-spacing: 1px; }
+        .feature-item p { font-size: 13px; color: var(--text); font-weight: 300; }
+        
+        /* Условия */
+        .conditions-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+            background: rgba(255,255,255,0.03);
+        }
+        .condition-card {
+            background: var(--gray); padding: 35px 25px; text-align: center;
+            transition: 0.4s; position: relative;
+        }
+        .condition-card::after {
+            content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+            width: 30px; height: 1px; background: var(--gold); transition: 0.4s;
+        }
+        .condition-card:hover::after { width: 60px; }
+        .condition-card:hover { background: #1a1a1a; }
+        .condition-card h4 { font-size: 15px; font-weight: 600; margin-bottom: 10px; letter-spacing: 1px; }
+        .condition-card p { font-size: 13px; color: var(--text); font-weight: 300; line-height: 1.5; }
+        
+        /* Форма */
+        .contact-form {
+            max-width: 500px; margin: 0 auto;
+            background: var(--gray); padding: 40px;
+            border: 1px solid rgba(201,169,110,0.15);
+        }
+        .contact-form input {
+            width: 100%; padding: 14px 16px; margin-bottom: 16px;
+            background: var(--black); border: 1px solid rgba(255,255,255,0.1);
+            color: var(--white); font-family: 'Montserrat', sans-serif;
+            font-size: 14px; transition: 0.3s;
+        }
+        .contact-form input:focus {
+            outline: none; border-color: var(--gold);
+        }
+        .contact-form input::placeholder { color: #555; }
+        .contact-form .btn { width: 100%; }
+        
+        /* Карта */
+        .map-container {
+            max-width: 800px; margin: 0 auto;
+            border: 1px solid rgba(201,169,110,0.2);
+            overflow: hidden;
+        }
+        
+        /* Футер */
+        .footer {
+            background: var(--gray); padding: 50px 20px;
+            text-align: center; border-top: 1px solid rgba(201,169,110,0.1);
+        }
+        .footer-logo {
+            font-family: 'Playfair Display', serif; font-size: 28px;
+            color: var(--gold); letter-spacing: 4px; margin-bottom: 20px;
+        }
+        .footer p { color: var(--text); font-size: 13px; margin-bottom: 6px; }
+        .footer .btn { margin-top: 20px; }
+        
+        /* Кнопка позвонить */
+        .call-fixed {
+            position: fixed; bottom: 30px; right: 30px; z-index: 500;
+            width: 56px; height: 56px; background: var(--gold);
+            border-radius: 50%; display: flex; align-items: center;
+            justify-content: center; box-shadow: 0 8px 30px rgba(201,169,110,0.4);
+            transition: 0.3s;
+        }
+        .call-fixed:hover { transform: scale(1.1); }
+        .call-fixed svg { stroke: var(--black); width: 22px; height: 22px; }
+        
+        /* Анимации */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .reveal {
+            opacity: 0; transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 36px; }
+            .hero p { font-size: 15px; }
+            .section { padding: 50px 16px; }
+            .section h2 { font-size: 28px; }
+            .features-grid { grid-template-columns: 1fr; }
+            .conditions-grid { grid-template-columns: 1fr; }
+            .header { padding: 12px 16px; }
+            .menu-panel { width: 280px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Прелоадер -->
+    <div id="preloader"><div class="loader"></div></div>
+
+    <!-- Шапка -->
+    <header class="header" id="header">
+        <button class="burger" onclick="openMenu()">
+            <span></span><span></span><span></span>
+        </button>
+        <a href="#" class="header-logo">KVADRAT</a>
+        <a href="tel:+79671251240" class="header-phone">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </a>
+    </header>
+
+    <!-- Меню -->
+    <div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
+    <div class="menu-panel" id="menuPanel">
+        <button class="close-btn" onclick="closeMenu()">✕</button>
+        <div class="menu-logo">KVADRAT</div>
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="about.html">О компании</a>
+        <a href="conditions.html">Условия</a>
+        <a href="contacts.html">Контакты</a>
+        <div class="menu-socials">
+            <a href="https://wa.me/79671251240">WA</a>
+            <a href="https://t.me/kvadratcapital">TG</a>
+            <a href="https://instagram.com/kvadratcapital">IG</a>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="hero-badge">Премиальное агентство</div>
+            <h1>Kvadrat <span>Capital</span></h1>
+            <p>Исламская рассрочка до 6 лет. Без первого взноса. Материнский капитал. Премиальная недвижимость в Чеченской Республике.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-gold">Получить консультацию</a>
+                <a href="catalog.html" class="btn btn-outline">Смотреть каталог</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Преимущества -->
+    <section class="section reveal">
+        <div class="section-label">Почему мы</div>
+        <h2>Преимущества Kvadrat Capital</h2>
+        <p class="subtitle">Работаем с ведущими застройщиками Чеченской Республики</p>
+        <div class="divider"></div>
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <h4>Юридическая чистота</h4>
+                <p>Проверяем все документы перед сделкой</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <h4>Быстрые сделки</h4>
+                <p>Оформление от 1 дня</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                </div>
+                <h4>Выгодные условия</h4>
+                <p>Прямые контакты застройщиков</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                </div>
+                <h4>Вся Чечня</h4>
+                <p>Работаем по всей Республике</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Условия -->
+    <section class="section reveal">
+        <div class="section-label">Условия</div>
+        <h2>Условия покупки</h2>
+        <p class="subtitle">Гибкие программы для каждой семьи</p>
+        <div class="divider"></div>
+        <div class="conditions-grid">
+            <div class="condition-card">
+                <h4>Исламская рассрочка</h4>
+                <p>Без процентов до 6 лет</p>
+            </div>
+            <div class="condition-card">
+                <h4>Без первого взноса</h4>
+                <p>Заезжайте сразу</p>
+            </div>
+            <div class="condition-card">
+                <h4>Материнский капитал</h4>
+                <p>На первого и второго ребёнка</p>
+            </div>
+            <div class="condition-card">
+                <h4>Скидки участникам СВО</h4>
+                <p>Особые условия для военных</p>
+            </div>
+            <div class="condition-card">
+                <h4>Скидки пенсионерам</h4>
+                <p>Льготные программы</p>
+            </div>
+            <div class="condition-card">
+                <h4>Коммерческая</h4>
+                <p>Офисы и помещения</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Форма -->
+    <section class="section reveal" id="contact">
+        <div class="section-label">Заявка</div>
+        <h2>Получить консультацию</h2>
+        <p class="subtitle">Оставьте заявку — перезвоним через 15 минут</p>
+        <div class="divider"></div>
+        <div class="contact-form">
+            <form id="contactForm" action="https://formspree.io/f/xdaveznz" method="POST">
+                <input type="text" name="name" placeholder="Имя Фамилия" required>
+                <input type="tel" name="phone" placeholder="+7" required>
+                <button type="submit" class="btn btn-gold">Отправить заявку</button>
+            </form>
+            <p id="formSuccess" style="display:none; text-align:center; color:var(--gold); margin-top:16px; font-weight:500;">Спасибо! Мы свяжемся с вами.</p>
+        </div>
+    </section>
+
+    <!-- Карта -->
+    <section class="section reveal">
+        <div class="section-label">Офис</div>
+        <h2>Где мы находимся</h2>
+        <p class="subtitle">Ждём вас в центре Грозного</p>
+        <div class="divider"></div>
+        <div class="map-container">
+            <iframe src="https://yandex.ru/map-widget/v1/?ll=45.686887%2C43.323370&z=17&pt=45.686887,43.323370,pm2rdm" width="100%" height="400" frameborder="0" allowfullscreen style="border:0; filter: grayscale(1);"></iframe>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="footer-logo">KVADRAT CAPITAL</div>
+        <p>г. Грозный, ул. С.Ш. Лорсанова, 4</p>
+        <p>Пн–Сб: 10:00 – 17:00</p>
+        <a href="tel:+79671251240" class="btn btn-outline">Связаться с нами</a>
+    </footer>
+
+    <!-- Кнопка позвонить -->
+    <a href="tel:+79671251240" class="call-fixed">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    </a>
+
+    <script>
+        // Прелоадер
+        window.addEventListener('load', function() {
+            document.getElementById('preloader').classList.add('hidden');
+        });
+        
+        // Меню
+        function openMenu() {
+            document.getElementById('menuOverlay').classList.add('open');
+            document.getElementById('menuPanel').classList.add('open');
+        }
+        function closeMenu() {
+            document.getElementById('menuOverlay').classList.remove('open');
+            document.getElementById('menuPanel').classList.remove('open');
+        }
+        
+        // Шапка при прокрутке
+        window.addEventListener('scroll', function() {
+            var header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Анимация появления
+        var revealObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.reveal').forEach(function(el) {
+            revealObserver.observe(el);
+        });
+        
+        // Форма
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            setTimeout(function() {
+                document.getElementById('contactForm').reset();
+                document.getElementById('formSuccess').style.display = 'block';
+            }, 500);
+        });
+    </script>
+
+</body>
+</html> «Kvadrat» — Чеченская Республика</title>
     <link rel="icon" type="image/png" href="Logo.png">
     <meta name="description" content="Агентство недвижимости Kvadrat Capital в Грозном. Продажа квартир и домов в Чеченской Республике. Исламская рассрочка до 6 лет, без первого взноса, материнский капитал. Работаем со всеми застройщиками.">
 <meta name="keywords" content="агентство недвижимости Грозный, купить квартиру Грозный, недвижимость Грозный, исламская рассрочка, материнский капитал, недвижимость Дубай, квартира без первого взноса, Чеченская Республика недвижимость, Kvadrat Capital">
