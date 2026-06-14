@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Каталог недвижимости — Kvadrat Capital</title>
     <link rel="icon" type="image/png" href="Logo.png">
-    <meta name="description" content="Каталог недвижимости от Kvadrat Capital. Квартиры, дома, участки в Чеченской Республике. Исламская рассрочка, материнский капитал.">
+    <meta name="description" content="Каталог недвижимости от Kvadrat Capital. Квартиры в Чеченской Республике. Исламская рассрочка, материнский капитал.">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -32,8 +32,6 @@
         .catalog-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
         .catalog-card .card-img {
             width: 100%; height: 220px; object-fit: cover; background: #e2e8f0;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 48px; color: #94a3b8;
         }
         .catalog-card .card-body { padding: 20px; }
         .catalog-card .card-body h3 { font-size: 18px; margin-bottom: 4px; color: #0f172a; }
@@ -111,61 +109,23 @@
                     <p class="details">Сдача: 2029 | Центр Грозного</p>
                     <span class="tag">Квартиры</span>
                     <button onclick="toggleDetail(this)" class="btn" style="border:none; cursor:pointer; width:100%;">Подробнее</button>
-                    
                     <div class="detail-info" style="display:none; margin-top:16px; padding-top:16px; border-top:1px solid #e2e8f0;">
                         <p style="font-weight:600; margin-bottom:10px; color:#0f172a;">Планировки и цены:</p>
-                        <p style="font-size:14px; color:#475569;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
-                            1-комнатные — от 2 000 000 ₽
-                        </p>
-                        <p style="font-size:14px; color:#475569;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>
-                            2-комнатные — от 3 500 000 ₽
-                        </p>
-                        
+                        <p style="font-size:14px; color:#475569;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg>1-комнатные — от 2 000 000 ₽</p>
+                        <p style="font-size:14px; color:#475569;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>2-комнатные — от 3 500 000 ₽</p>
                         <p style="font-weight:600; margin-top:14px; margin-bottom:10px; color:#0f172a;">Что есть рядом:</p>
-                        <p style="font-size:14px; color:#475569;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                            Охрана
-                        </p>
-                        <p style="font-size:14px; color:#475569;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-                            Аптеки
-                        </p>
-                        <p style="font-size:14px; color:#475569;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-                            Школа
-                        </p>
-                        <p style="font-size:14px; color:#475569;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
-                            Детский сад
-                        </p>
-                        <p style="font-size:14px; color:#475569;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2 14h13l3-8H6"/></svg>
-                            Магазины
-                        </p>
-                        <p style="font-size:14px; color:#475569;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><rect x="2" y="2" width="20" height="20" rx="2"/><line x1="2" y1="6" x2="22" y2="6"/><line x1="6" y1="2" x2="6" y2="6"/><line x1="18" y1="2" x2="18" y2="6"/></svg>
-                            ТЦ
-                        </p>
-                        <p style="font-size:14px; color:#475569;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
-                            Кафе и рестораны
-                        </p>
-                        <p style="font-size:14px; color:#475569;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><path d="M18 10L12 3l-6 7"/><path d="M12 21V10"/><path d="M12 21c-3 0-5-2-5-5s2-5 5-5 5 2 5 5-2 5-5 5z"/></svg>
-                            Мечеть
-                        </p>
-                        <p style="font-size:14px; color:#475569;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg>
-                            Зона отдыха
-                        </p>
-                        
+                        <p style="font-size:14px; color:#475569;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Охрана</p>
+                        <p style="font-size:14px; color:#475569;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>Аптеки</p>
+                        <p style="font-size:14px; color:#475569;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Школа</p>
+                        <p style="font-size:14px; color:#475569;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>Детский сад</p>
+                        <p style="font-size:14px; color:#475569;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2 14h13l3-8H6"/></svg>Магазины</p>
+                        <p style="font-size:14px; color:#475569;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><rect x="2" y="2" width="20" height="20" rx="2"/><line x1="2" y1="6" x2="22" y2="6"/><line x1="6" y1="2" x2="6" y2="6"/><line x1="18" y1="2" x2="18" y2="6"/></svg>ТЦ</p>
+                        <p style="font-size:14px; color:#475569;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>Кафе и рестораны</p>
+                        <p style="font-size:14px; color:#475569;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><path d="M18 10L12 3l-6 7"/><path d="M12 21V10"/><path d="M12 21c-3 0-5-2-5-5s2-5 5-5 5 2 5 5-2 5-5 5z"/></svg>Мечеть</p>
+                        <p style="font-size:14px; color:#475569;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg>Зона отдыха</p>
                         <a href="tel:+79671251240" class="btn" style="margin-top:14px;">Позвонить</a>
                     </div>
-                    
                     <button onclick="toggleCalc(this)" class="btn" style="border:none; cursor:pointer; width:100%; background:#0f172a; margin-top:10px;">Рассчитать рассрочку</button>
-                    
                     <div class="calc-block">
                         <label>Этаж</label>
                         <select class="calc-floor">
@@ -173,7 +133,6 @@
                             <option value="62000">12–18 этаж (62 000 ₽/м²)</option>
                             <option value="59000">19–28 этаж (59 000 ₽/м²)</option>
                         </select>
-                        
                         <label>Площадь</label>
                         <select class="calc-area">
                             <option value="35.90">1-комн. 35,90 м²</option>
@@ -185,11 +144,9 @@
                             <option value="63.90">2-комн. 63,90 м²</option>
                             <option value="64.13">2-комн. 64,13 м²</option>
                         </select>
-                        
                         <label>Сумма взноса (₽)</label>
                         <input type="number" class="calc-down" placeholder="Минимум 5 000 ₽ за м²" value="0">
                         <p style="font-size:11px; color:#64748b; margin-top:-6px; margin-bottom:10px;">Минимальный взнос: 5 000 ₽ × площадь</p>
-                        
                         <label>Срок рассрочки</label>
                         <select class="calc-period">
                             <option value="12">1 год (12 месяцев)</option>
@@ -198,7 +155,6 @@
                             <option value="48">4 года (48 месяцев)</option>
                             <option value="60">5 лет (60 месяцев)</option>
                         </select>
-                        
                         <button onclick="calculateRiviera(this)" class="btn" style="width:100%; border:none; cursor:pointer;">Рассчитать</button>
                         <div class="calc-result"></div>
                     </div>
@@ -215,61 +171,63 @@
                     <p class="details">Сдача: 2030</p>
                     <span class="tag">Квартиры</span>
                     <button onclick="toggleDetail(this)" class="btn" style="border:none; cursor:pointer; width:100%;">Подробнее</button>
-                    
                     <div class="detail-info" style="display:none; margin-top:16px; padding-top:16px; border-top:1px solid #e2e8f0;">
                         <p style="font-weight:600; margin-bottom:10px; color:#0f172a;">Планировки и цены:</p>
-                        <p style="font-size:14px; color:#475569;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
-                            Студия — от 1 000 000 ₽
-                        </p>
-                        <p style="font-size:14px; color:#475569;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
-                            1-комнатные — от 1 800 000 ₽
-                        </p>
-                        <p style="font-size:14px; color:#475569;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>
-                            2-комнатные — от 2 300 000 ₽
-                        </p>
-                        <p style="font-size:14px; color:#475569;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/><line x1="3" y1="9" x2="21" y2="9"/></svg>
-                            3-комнатные — от 4 500 000 ₽
-                        </p>
-                        
+                        <p style="font-size:14px; color:#475569;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>Студия — от 1 000 000 ₽</p>
+                        <p style="font-size:14px; color:#475569;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg>1-комнатные — от 1 800 000 ₽</p>
+                        <p style="font-size:14px; color:#475569;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>2-комнатные — от 2 300 000 ₽</p>
+                        <p style="font-size:14px; color:#475569;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/><line x1="3" y1="9" x2="21" y2="9"/></svg>3-комнатные — от 4 500 000 ₽</p>
                         <p style="font-weight:600; margin-top:14px; margin-bottom:10px; color:#0f172a;">Что есть рядом:</p>
-                        <p style="font-size:14px; color:#475569;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                            Охрана
-                        </p>
-                        <p style="font-size:14px; color:#475569;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-                            Поликлиника №2
-                        </p>
-                        <p style="font-size:14px; color:#475569;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-                            Районная больница
-                        </p>
-                        <p style="font-size:14px; color:#475569;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-                            Школа
-                        </p>
-                        <p style="font-size:14px; color:#475569;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
-                            Детский сад
-                        </p>
-                        <p style="font-size:14px; color:#475569;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2 14h13l3-8H6"/></svg>
-                            Магазины
-                        </p>
-                        <p style="font-size:14px; color:#475569;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><rect x="2" y="2" width="20" height="20" rx="2"/><line x1="2" y1="6" x2="22" y2="6"/><line x1="6" y1="2" x2="6" y2="6"/><line x1="18" y1="2" x2="18" y2="6"/></svg>
-                            ТЦ Минутка
-                        </p>
-                        <p style="font-size:14px; color:#475569;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
-                            Кафе и рестораны
-                        </p>
-                        
+                        <p style="font-size:14px; color:#475569;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Охрана</p>
+                        <p style="font-size:14px; color:#475569;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>Поликлиника №2</p>
+                        <p style="font-size:14px; color:#475569;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Районная больница</p>
+                        <p style="font-size:14px; color:#475569;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Школа</p>
+                        <p style="font-size:14px; color:#475569;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>Детский сад</p>
+                        <p style="font-size:14px; color:#475569;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2 14h13l3-8H6"/></svg>Магазины</p>
+                        <p style="font-size:14px; color:#475569;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><rect x="2" y="2" width="20" height="20" rx="2"/><line x1="2" y1="6" x2="22" y2="6"/><line x1="6" y1="2" x2="6" y2="6"/><line x1="18" y1="2" x2="18" y2="6"/></svg>ТЦ Минутка</p>
+                        <p style="font-size:14px; color:#475569;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>Кафе и рестораны</p>
                         <a href="tel:+79671251240" class="btn" style="margin-top:14px;">Позвонить</a>
+                    </div>
+                    <button onclick="toggleCalc(this)" class="btn" style="border:none; cursor:pointer; width:100%; background:#0f172a; margin-top:10px;">Рассчитать рассрочку</button>
+                    <div class="calc-block">
+                        <label>Этаж</label>
+                        <select class="calc-floor">
+                            <option value="58000">6–11 этаж (58 000 ₽/м²)</option>
+                            <option value="55000">12–18 этаж (55 000 ₽/м²)</option>
+                        </select>
+                        <label>Площадь</label>
+                        <select class="calc-area">
+                            <option value="20.20">Студия 20,20 м²</option>
+                            <option value="21.73">Студия 21,73 м²</option>
+                            <option value="21.85">Студия 21,85 м²</option>
+                            <option value="32.86">1-комн. 32,86 м²</option>
+                            <option value="40.77">1-комн. 40,77 м²</option>
+                            <option value="43.57">2-комн. 43,57 м²</option>
+                            <option value="45.65">1-комн. 45,65 м²</option>
+                            <option value="46.24">1-комн. 46,24 м²</option>
+                            <option value="46.56">1-комн. 46,56 м²</option>
+                            <option value="47.01">1-комн. 47,01 м²</option>
+                            <option value="49.99">1-комн. 49,99 м²</option>
+                            <option value="50.11">1-комн. 50,11 м²</option>
+                            <option value="50.31">1-комн. 50,31 м²</option>
+                            <option value="52.89">1-комн. 52,89 м²</option>
+                            <option value="54.42">2-комн. 54,42 м²</option>
+                            <option value="73.35">2-комн. 73,35 м²</option>
+                            <option value="83.39">3-комн. 83,39 м²</option>
+                        </select>
+                        <label>Сумма взноса (₽)</label>
+                        <input type="number" class="calc-down" placeholder="Минимум 3 000 ₽ за м²" value="0">
+                        <p style="font-size:11px; color:#64748b; margin-top:-6px; margin-bottom:10px;">Минимальный взнос: 3 000 ₽ × площадь</p>
+                        <label>Срок рассрочки</label>
+                        <select class="calc-period">
+                            <option value="12">1 год (12 месяцев)</option>
+                            <option value="24">2 года (24 месяца)</option>
+                            <option value="36">3 года (36 месяцев)</option>
+                            <option value="48">4 года (48 месяцев)</option>
+                            <option value="60">5 лет (60 месяцев)</option>
+                        </select>
+                        <button onclick="calculateMichurina(this)" class="btn" style="width:100%; border:none; cursor:pointer;">Рассчитать</button>
+                        <div class="calc-result"></div>
                     </div>
                 </div>
             </div>
@@ -284,61 +242,55 @@
                     <p class="details">Сдача: 4 квартал 2027</p>
                     <span class="tag">Квартиры</span>
                     <button onclick="toggleDetail(this)" class="btn" style="border:none; cursor:pointer; width:100%;">Подробнее</button>
-                    
                     <div class="detail-info" style="display:none; margin-top:16px; padding-top:16px; border-top:1px solid #e2e8f0;">
                         <p style="font-weight:600; margin-bottom:10px; color:#0f172a;">Планировки и цены:</p>
-                        <p style="font-size:14px; color:#475569;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
-                            1-комнатные — от 2 700 000 ₽
-                        </p>
-                        <p style="font-size:14px; color:#475569;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>
-                            2-комнатные — от 3 000 000 ₽
-                        </p>
-                        <p style="font-size:14px; color:#475569;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/><line x1="3" y1="9" x2="21" y2="9"/></svg>
-                            3-комнатные — от 4 000 000 ₽
-                        </p>
-                        
+                        <p style="font-size:14px; color:#475569;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg>1-комнатные — от 2 700 000 ₽</p>
+                        <p style="font-size:14px; color:#475569;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>2-комнатные — от 3 000 000 ₽</p>
+                        <p style="font-size:14px; color:#475569;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/><line x1="3" y1="9" x2="21" y2="9"/></svg>3-комнатные — от 4 000 000 ₽</p>
                         <p style="font-weight:600; margin-top:14px; margin-bottom:10px; color:#0f172a;">Что есть рядом:</p>
-                        <p style="font-size:14px; color:#475569;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                            Охрана
-                        </p>
-                        <p style="font-size:14px; color:#475569;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-                            Аптеки
-                        </p>
-                        <p style="font-size:14px; color:#475569;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-                            Школа
-                        </p>
-                        <p style="font-size:14px; color:#475569;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
-                            Детский сад
-                        </p>
-                        <p style="font-size:14px; color:#475569;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2 14h13l3-8H6"/></svg>
-                            Магазины
-                        </p>
-                        <p style="font-size:14px; color:#475569;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><rect x="2" y="2" width="20" height="20" rx="2"/><line x1="2" y1="6" x2="22" y2="6"/><line x1="6" y1="2" x2="6" y2="6"/><line x1="18" y1="2" x2="18" y2="6"/></svg>
-                            ТЦ
-                        </p>
-                        <p style="font-size:14px; color:#475569;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
-                            Кафе и рестораны
-                        </p>
-                        <p style="font-size:14px; color:#475569;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><path d="M18 10L12 3l-6 7"/><path d="M12 21V10"/><path d="M12 21c-3 0-5-2-5-5s2-5 5-5 5 2 5 5-2 5-5 5z"/></svg>
-                            Мечеть
-                        </p>
-                        <p style="font-size:14px; color:#475569;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg>
-                            Зона отдыха
-                        </p>
-                        
+                        <p style="font-size:14px; color:#475569;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Охрана</p>
+                        <p style="font-size:14px; color:#475569;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>Аптеки</p>
+                        <p style="font-size:14px; color:#475569;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Школа</p>
+                        <p style="font-size:14px; color:#475569;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>Детский сад</p>
+                        <p style="font-size:14px; color:#475569;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2 14h13l3-8H6"/></svg>Магазины</p>
+                        <p style="font-size:14px; color:#475569;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><rect x="2" y="2" width="20" height="20" rx="2"/><line x1="2" y1="6" x2="22" y2="6"/><line x1="6" y1="2" x2="6" y2="6"/><line x1="18" y1="2" x2="18" y2="6"/></svg>ТЦ</p>
+                        <p style="font-size:14px; color:#475569;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>Кафе и рестораны</p>
+                        <p style="font-size:14px; color:#475569;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><path d="M18 10L12 3l-6 7"/><path d="M12 21V10"/><path d="M12 21c-3 0-5-2-5-5s2-5 5-5 5 2 5 5-2 5-5 5z"/></svg>Мечеть</p>
+                        <p style="font-size:14px; color:#475569;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg>Зона отдыха</p>
                         <a href="tel:+79671251240" class="btn" style="margin-top:14px;">Позвонить</a>
+                    </div>
+                    <button onclick="toggleCalc(this)" class="btn" style="border:none; cursor:pointer; width:100%; background:#0f172a; margin-top:10px;">Рассчитать рассрочку</button>
+                    <div class="calc-block">
+                        <label>Этаж</label>
+                        <select class="calc-floor">
+                            <option value="76000">4–7 этаж (76 000 ₽/м²)</option>
+                            <option value="71000">8–12 этаж (71 000 ₽/м²)</option>
+                            <option value="66000">13–23 этаж (66 000 ₽/м²)</option>
+                        </select>
+                        <label>Площадь</label>
+                        <select class="calc-area">
+                            <option value="41.4">1-комн. 41,4 м²</option>
+                            <option value="45.9">Евро-2 45,9 м²</option>
+                            <option value="48.3">Евро-3 48,3 м²</option>
+                            <option value="51.0">Евро-2 51,0 м²</option>
+                            <option value="55.2">Евро-3 55,2 м²</option>
+                            <option value="60.9">Евро-3 60,9 м²</option>
+                            <option value="63.9">Евро-3 63,9 м²</option>
+                            <option value="99.8">2-комн. 99,8 м²</option>
+                        </select>
+                        <label>Сумма взноса (₽)</label>
+                        <input type="number" class="calc-down" placeholder="Минимум 5 000 ₽ за м²" value="0">
+                        <p style="font-size:11px; color:#64748b; margin-top:-6px; margin-bottom:10px;">Минимальный взнос: 5 000 ₽ × площадь</p>
+                        <label>Срок рассрочки</label>
+                        <select class="calc-period">
+                            <option value="12">1 год (12 месяцев)</option>
+                            <option value="24">2 года (24 месяца)</option>
+                            <option value="36">3 года (36 месяцев)</option>
+                            <option value="48">4 года (48 месяцев)</option>
+                            <option value="60">5 лет (60 месяцев)</option>
+                        </select>
+                        <button onclick="calculateStandard(this)" class="btn" style="width:100%; border:none; cursor:pointer;">Рассчитать</button>
+                        <div class="calc-result"></div>
                     </div>
                 </div>
             </div>
@@ -353,61 +305,50 @@
                     <p class="details">Сдача: 4 квартал 2027</p>
                     <span class="tag">Квартиры</span>
                     <button onclick="toggleDetail(this)" class="btn" style="border:none; cursor:pointer; width:100%;">Подробнее</button>
-                    
                     <div class="detail-info" style="display:none; margin-top:16px; padding-top:16px; border-top:1px solid #e2e8f0;">
                         <p style="font-weight:600; margin-bottom:10px; color:#0f172a;">Планировки и цены:</p>
-                        <p style="font-size:14px; color:#475569;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
-                            1-комнатные — от 2 400 000 ₽
-                        </p>
-                        <p style="font-size:14px; color:#475569;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>
-                            2-комнатные — от 3 000 000 ₽
-                        </p>
-                        <p style="font-size:14px; color:#475569;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/><line x1="3" y1="9" x2="21" y2="9"/></svg>
-                            3-комнатные — от 4 000 000 ₽
-                        </p>
-                        
+                        <p style="font-size:14px; color:#475569;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg>1-комнатные — от 2 400 000 ₽</p>
+                        <p style="font-size:14px; color:#475569;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>2-комнатные — от 3 000 000 ₽</p>
+                        <p style="font-size:14px; color:#475569;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/><line x1="3" y1="9" x2="21" y2="9"/></svg>3-комнатные — от 4 000 000 ₽</p>
                         <p style="font-weight:600; margin-top:14px; margin-bottom:10px; color:#0f172a;">Что есть рядом:</p>
-                        <p style="font-size:14px; color:#475569;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                            Охрана
-                        </p>
-                        <p style="font-size:14px; color:#475569;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-                            Аптеки
-                        </p>
-                        <p style="font-size:14px; color:#475569;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-                            Школа
-                        </p>
-                        <p style="font-size:14px; color:#475569;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
-                            Детский сад
-                        </p>
-                        <p style="font-size:14px; color:#475569;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2 14h13l3-8H6"/></svg>
-                            Магазины
-                        </p>
-                        <p style="font-size:14px; color:#475569;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><rect x="2" y="2" width="20" height="20" rx="2"/><line x1="2" y1="6" x2="22" y2="6"/><line x1="6" y1="2" x2="6" y2="6"/><line x1="18" y1="2" x2="18" y2="6"/></svg>
-                            ТЦ
-                        </p>
-                        <p style="font-size:14px; color:#475569;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
-                            Кафе и рестораны
-                        </p>
-                        <p style="font-size:14px; color:#475569;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><path d="M18 10L12 3l-6 7"/><path d="M12 21V10"/><path d="M12 21c-3 0-5-2-5-5s2-5 5-5 5 2 5 5-2 5-5 5z"/></svg>
-                            Мечеть
-                        </p>
-                        <p style="font-size:14px; color:#475569;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg>
-                            Зона отдыха
-                        </p>
-                        
+                        <p style="font-size:14px; color:#475569;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Охрана</p>
+                        <p style="font-size:14px; color:#475569;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>Аптеки</p>
+                        <p style="font-size:14px; color:#475569;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Школа</p>
+                        <p style="font-size:14px; color:#475569;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>Детский сад</p>
+                        <p style="font-size:14px; color:#475569;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2 14h13l3-8H6"/></svg>Магазины</p>
+                        <p style="font-size:14px; color:#475569;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><rect x="2" y="2" width="20" height="20" rx="2"/><line x1="2" y1="6" x2="22" y2="6"/><line x1="6" y1="2" x2="6" y2="6"/><line x1="18" y1="2" x2="18" y2="6"/></svg>ТЦ</p>
+                        <p style="font-size:14px; color:#475569;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>Кафе и рестораны</p>
+                        <p style="font-size:14px; color:#475569;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><path d="M18 10L12 3l-6 7"/><path d="M12 21V10"/><path d="M12 21c-3 0-5-2-5-5s2-5 5-5 5 2 5 5-2 5-5 5z"/></svg>Мечеть</p>
+                        <p style="font-size:14px; color:#475569;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg>Зона отдыха</p>
                         <a href="tel:+79671251240" class="btn" style="margin-top:14px;">Позвонить</a>
+                    </div>
+                    <button onclick="toggleCalc(this)" class="btn" style="border:none; cursor:pointer; width:100%; background:#0f172a; margin-top:10px;">Рассчитать рассрочку</button>
+                    <div class="calc-block">
+                        <label>Этаж</label>
+                        <select class="calc-floor">
+                            <option value="76000">4–7 этаж (76 000 ₽/м²)</option>
+                            <option value="71000">8–12 этаж (71 000 ₽/м²)</option>
+                            <option value="66000">13–23 этаж (66 000 ₽/м²)</option>
+                        </select>
+                        <label>Площадь</label>
+                        <select class="calc-area">
+                            <option value="36.5">1-комн. 36,5 м²</option>
+                            <option value="46.4">Евро-2 46,4 м²</option>
+                            <option value="59.7">Евро-3 59,7 м²</option>
+                        </select>
+                        <label>Сумма взноса (₽)</label>
+                        <input type="number" class="calc-down" placeholder="Минимум 5 000 ₽ за м²" value="0">
+                        <p style="font-size:11px; color:#64748b; margin-top:-6px; margin-bottom:10px;">Минимальный взнос: 5 000 ₽ × площадь</p>
+                        <label>Срок рассрочки</label>
+                        <select class="calc-period">
+                            <option value="12">1 год (12 месяцев)</option>
+                            <option value="24">2 года (24 месяца)</option>
+                            <option value="36">3 года (36 месяцев)</option>
+                            <option value="48">4 года (48 месяцев)</option>
+                            <option value="60">5 лет (60 месяцев)</option>
+                        </select>
+                        <button onclick="calculateStandard(this)" class="btn" style="width:100%; border:none; cursor:pointer;">Рассчитать</button>
+                        <div class="calc-result"></div>
                     </div>
                 </div>
             </div>
@@ -451,28 +392,66 @@
             var down = Number(calcBlock.querySelector('.calc-down').value) || 0;
             var period = Number(calcBlock.querySelector('.calc-period').value);
             var resultDiv = calcBlock.querySelector('.calc-result');
-            
             var minDown = 5000 * area;
-            
             if (down < minDown) {
                 resultDiv.style.display = 'block';
                 resultDiv.innerHTML = '<span style="color:#c0392b;">Минимальный взнос: ' + minDown.toLocaleString('ru-RU') + ' ₽</span>';
                 return;
             }
-            
             var markupRates = {12: 0, 24: 10, 36: 20, 48: 30, 60: 35};
             var markupPercent = markupRates[period] || 0;
-            
             var basePrice = pricePerSqm * area;
             var afterDown = basePrice - down;
             var total = afterDown + (afterDown * markupPercent / 100);
             var monthly = Math.ceil(total / period);
-            
             resultDiv.style.display = 'block';
-            resultDiv.innerHTML = 
-                '<p style="font-size:28px;font-weight:700;color:#0f172a;">' + monthly.toLocaleString('ru-RU') + ' ₽/мес</p>' +
-                '<p style="font-size:13px;color:#64748b;">Срок: ' + period + ' месяцев</p>' +
-                '<a href="tel:+79671251240" class="btn" style="margin-top:10px; background:#0f172a;">Забронировать</a>';
+            resultDiv.innerHTML = '<p style="font-size:28px;font-weight:700;color:#0f172a;">' + monthly.toLocaleString('ru-RU') + ' ₽/мес</p><p style="font-size:13px;color:#64748b;">Срок: ' + period + ' месяцев</p><a href="tel:+79671251240" class="btn" style="margin-top:10px; background:#0f172a;">Забронировать</a>';
+        }
+        
+        function calculateMichurina(btn) {
+            var calcBlock = btn.parentElement;
+            var pricePerSqm = Number(calcBlock.querySelector('.calc-floor').value);
+            var area = Number(calcBlock.querySelector('.calc-area').value);
+            var down = Number(calcBlock.querySelector('.calc-down').value) || 0;
+            var period = Number(calcBlock.querySelector('.calc-period').value);
+            var resultDiv = calcBlock.querySelector('.calc-result');
+            var minDown = 3000 * area;
+            if (down < minDown) {
+                resultDiv.style.display = 'block';
+                resultDiv.innerHTML = '<span style="color:#c0392b;">Минимальный взнос: ' + minDown.toLocaleString('ru-RU') + ' ₽</span>';
+                return;
+            }
+            var markupRates = {12: 0, 24: 15, 36: 25, 48: 30, 60: 35};
+            var markupPercent = markupRates[period] || 0;
+            var basePrice = pricePerSqm * area;
+            var afterDown = basePrice - down;
+            var total = afterDown + (afterDown * markupPercent / 100);
+            var monthly = Math.ceil(total / period);
+            resultDiv.style.display = 'block';
+            resultDiv.innerHTML = '<p style="font-size:28px;font-weight:700;color:#0f172a;">' + monthly.toLocaleString('ru-RU') + ' ₽/мес</p><p style="font-size:13px;color:#64748b;">Срок: ' + period + ' месяцев</p><a href="tel:+79671251240" class="btn" style="margin-top:10px; background:#0f172a;">Забронировать</a>';
+        }
+        
+        function calculateStandard(btn) {
+            var calcBlock = btn.parentElement;
+            var pricePerSqm = Number(calcBlock.querySelector('.calc-floor').value);
+            var area = Number(calcBlock.querySelector('.calc-area').value);
+            var down = Number(calcBlock.querySelector('.calc-down').value) || 0;
+            var period = Number(calcBlock.querySelector('.calc-period').value);
+            var resultDiv = calcBlock.querySelector('.calc-result');
+            var minDown = 5000 * area;
+            if (down < minDown) {
+                resultDiv.style.display = 'block';
+                resultDiv.innerHTML = '<span style="color:#c0392b;">Минимальный взнос: ' + minDown.toLocaleString('ru-RU') + ' ₽</span>';
+                return;
+            }
+            var markupRates = {12: 0, 24: 15, 36: 20, 48: 25, 60: 30};
+            var markupPercent = markupRates[period] || 0;
+            var basePrice = pricePerSqm * area;
+            var afterDown = basePrice - down;
+            var total = afterDown + (afterDown * markupPercent / 100);
+            var monthly = Math.ceil(total / period);
+            resultDiv.style.display = 'block';
+            resultDiv.innerHTML = '<p style="font-size:28px;font-weight:700;color:#0f172a;">' + monthly.toLocaleString('ru-RU') + ' ₽/мес</p><p style="font-size:13px;color:#64748b;">Срок: ' + period + ' месяцев</p><a href="tel:+79671251240" class="btn" style="margin-top:10px; background:#0f172a;">Забронировать</a>';
         }
     </script>
 
